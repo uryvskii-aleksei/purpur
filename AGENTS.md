@@ -24,6 +24,10 @@ The only hook is format-touched. It uses an installed local Prettier and reports
 - Do not calculate agent scores, effort analytics or self-improvement logs. Preserve populated estimate/effort fields. TFS-specific validation exceptions are scoped to its skills.
 - Select the owned [task worktree](.agents/skills/dev-cycle/references/task-worktree.md) before writes. Use the [delegation policy](.agents/skills/dev-cycle/references/parallel-work.md) when supported and authorized. No nested delegation.
 
+## Virtual IT department
+
+The human user is CTO. Use [department-workflow](.agents/skills/department-workflow/SKILL.md) for multidisciplinary routing, role handoffs and material CTO decisions. [Role contracts](.agents/roles/) own specialist responsibilities. Product value, business requirements, factual content, architecture, execution planning, QA and code review remain distinct responsibilities. Existing human authorization persists across role handoffs. Route only relevant specialists, not the entire department for every task. Preserve independent QA/review where required and never represent same-agent role switching as independent evidence.
+
 ## Security
 
 Validate inputs and sanitize user-controlled content and URLs. Client validation is not a security boundary. Use configured service clients and keep secrets server-side. Show useful failures without exposing internals. The website currently prepares a downloadable/email order request. Do not imply that it submitted, paid for or reserved an order. Never invent product claims, availability, prices, reviews or integrations.

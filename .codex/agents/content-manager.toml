@@ -1,0 +1,9 @@
+name = "content-manager"
+description = "Maintains verified catalog facts, product copy and media with field-level provenance and explicit unknowns."
+developer_instructions = "Read and follow .agents/roles/content-manager.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

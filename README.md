@@ -24,33 +24,41 @@ npm run check
 
 ## 3. Виртуальный ИТ-отдел
 
-Общие правила находятся в [AGENTS.md](AGENTS.md). Координатор в текущем чате уточняет задачу, выбирает навыки, принимает результаты и отвечает за итоговую проверку и разрешённые внешние действия.
+Настроены 15 ролей и 19 навыков. Пользователь — CTO, основной координатор принимает запрос, выбирает нужных специалистов, объединяет доказательства и выполняет разрешённые внешние действия. Общие правила — в [AGENTS.md](AGENTS.md), полный состав и взаимодействие — в [документации отдела](docs/virtual-it-department.md).
 
-| Роль | Ответственность |
+| Область | Роли |
 | --- | --- |
-| [planner](.agents/roles/planner.md) | Исследование, варианты решения, зависимости и план. Только чтение |
-| [coder](.agents/roles/coder.md) | Реализация в назначенных файлах, регрессионные тесты и документация |
-| [reviewer](.agents/roles/reviewer.md) | Независимая проверка кода или техпроекта. Только чтение |
+| Управление и требования | `coordinator`, `product-owner`, `business-analyst` |
+| Пользовательский опыт и материалы | `designer`, `content-manager` |
+| Архитектура и реализация | `architect`, `planner`, `coder`, `integration-engineer` |
+| Качество и эксплуатация | `qa`, `reviewer`, `devops` |
+| Продвижение, продажи и данные | `marketing` с режимами SEO/SMM, `sales`, `bi-analyst` |
 
-Роли — инструкции для поддерживающей их среды. Они не создают постоянно работающих сотрудников или отдельную изоляцию. Делегирование зависит от возможностей среды и полномочий текущей задачи.
+Контракты лежат в `.agents/roles/`. Роли не создают постоянно работающих сотрудников или отдельную изоляцию. Модель и настройки рассуждения наследуются от пользователя, технические права и делегирование зависят от среды.
 
 ### 3.1. Навыки
 
-| Навык | Когда применять |
+[department-workflow](.agents/skills/department-workflow/SKILL.md) задаёт выбор ролей и передачу результата. Профильные процедуры:
+
+| Область | Навыки |
 | --- | --- |
-| [dev-cycle](.agents/skills/dev-cycle/SKILL.md) | Исследование, реализация, проверка и передача результата |
-| [design-and-docs](.agents/skills/design-and-docs/SKILL.md) | Требования, техпроекты, планы и сохранение контекста |
-| [build-and-test](.agents/skills/build-and-test/SKILL.md) | Сборка, тесты, линтеры, браузерная диагностика и CI |
-| [simplify-solution](.agents/skills/simplify-solution/SKILL.md) | Упрощение решения, рефакторинг и удаление доказанно мёртвого кода |
-| [figma-to-code](.agents/skills/figma-to-code/SKILL.md) | Реализация интерфейса по макету при доступной Figma-интеграции |
-| [tfs-work-items](.agents/skills/tfs-work-items/SKILL.md) | Задачи и исследовательские записи при явно выбранном TFS-проекте |
-| [tfs-pull-requests](.agents/skills/tfs-pull-requests/SKILL.md) | Локальные коммиты и PR при работе с TFS |
+| Ценность и процессы | [product-management](.agents/skills/product-management/SKILL.md), [business-analysis](.agents/skills/business-analysis/SKILL.md) |
+| Дизайн и контент | [ux-design](.agents/skills/ux-design/SKILL.md), [content-operations](.agents/skills/content-operations/SKILL.md) |
+| Архитектура и обмен | [architecture](.agents/skills/architecture/SKILL.md), [integration-design](.agents/skills/integration-design/SKILL.md) |
+| Качество, эксплуатация и данные | [quality-assurance](.agents/skills/quality-assurance/SKILL.md), [operations](.agents/skills/operations/SKILL.md), [data-analysis](.agents/skills/data-analysis/SKILL.md) |
+| Продвижение и продажи | [marketing-growth](.agents/skills/marketing-growth/SKILL.md), [sales-operations](.agents/skills/sales-operations/SKILL.md) |
+| Общая разработка | [dev-cycle](.agents/skills/dev-cycle/SKILL.md), [design-and-docs](.agents/skills/design-and-docs/SKILL.md), [build-and-test](.agents/skills/build-and-test/SKILL.md), [simplify-solution](.agents/skills/simplify-solution/SKILL.md) |
+| Задачи с интеграциями | [figma-to-code](.agents/skills/figma-to-code/SKILL.md), [tfs-work-items](.agents/skills/tfs-work-items/SKILL.md), [tfs-pull-requests](.agents/skills/tfs-pull-requests/SKILL.md). TFS используется только при явно выбранном назначении |
 
 В Codex канонические навыки лежат в `.agents/skills/`. Для Claude Code и Cursor сохранены указатели в `.claude/skills/` и адаптеры ролей в каталогах соответствующей среды. `CLAUDE.md` ссылается на общие правила. Наличие адаптера не гарантирует поддержку функции конкретной версией клиента.
 
-### 3.2. Рабочий процесс
+### 3.2. Рабочий процесс и CTO
 
-Простую задачу можно реализовать непосредственно с проверками. Исследование заканчивается конкретным техпроектом для человека. После одобрения сохраняются декомпозиция и контекст для отдельного запуска реализации. Для GitHub план задачи живёт в описании PR, для локальной работы — в чате, долговременный техпроект — в `docs/techprojects/`. Подробности: [работа над проектом](docs/development.md).
+Простая задача использует только нужные роли. Для комплексной задачи уточняются ценность и процесс, затем интерфейс, материалы и технические границы. Существенные открытые решения координатор собирает для CTO с вариантами, рекомендацией и последствиями. Уже принятые решения и разрешения действуют при передаче между специалистами.
+
+QA проверяет пользовательские и бизнес-сценарии, reviewer — код и техпроекты. Самопроверка автора не считается независимой проверкой. Факты о продукции и коммерческие правила подтверждает соответствующий владелец бизнеса. PO готовит предложение приоритетов и бизнес-приёмки, но не одобряет себя от имени человека.
+
+Исследование завершается техпроектом и передачей контекста. Реализация начинается по отдельному запросу. Планы локальной работы остаются в чате, планы PR — в описании PR, долговременные решения — в `docs/techprojects/`. Исполнители не меняют Git и внешние системы и не делегируют дальше. Подробности и примеры запросов: [работа отдела](docs/virtual-it-department.md), [разработка](docs/development.md).
 
 ### 3.3. Форматирование
 

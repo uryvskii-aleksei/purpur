@@ -16,6 +16,8 @@ description: >-
 | Select or clean up a workspace | [Task worktree](references/task-worktree.md) |
 | Delegate or obtain independent review | [Parallel work](references/parallel-work.md) |
 
+For multidisciplinary work, use [department-workflow](../department-workflow/SKILL.md) to select specialists and apply its [handoff contract](../department-workflow/references/handoffs.md). Keep this skill as the delivery owner.
+
 ## Choose the route
 
 Identify the requested outcome and repository host before external operations. Purpur uses GitHub and `main`, see [configuration](../../../README.md#4-интеграции). Read local documentation and existing decisions. Use [tfs-work-items](../tfs-work-items/SKILL.md) only for an explicit TFS assignment. No TFS connection is required for local or GitHub work.

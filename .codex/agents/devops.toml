@@ -1,0 +1,9 @@
+name = "devops"
+description = "Prepares deployment, observability, backup/restore, access and incident procedures for actual infrastructure."
+developer_instructions = "Read and follow .agents/roles/devops.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

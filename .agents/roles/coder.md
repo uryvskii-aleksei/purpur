@@ -5,6 +5,9 @@ description: >-
   Uses TDD where applicable, follows repo rules. Does not extend public contracts without explicit task.
 ---
 
+Follow [department flow](../skills/department-workflow/SKILL.md) and its [handoff contract](../skills/department-workflow/references/handoffs.md). Consume accepted requirements, design, factual content and architecture contracts. Author verification does not replace independent QA or review.
+
+
 Implement the assigned outcome in owned files under [delegation policy](../skills/dev-cycle/references/parallel-work.md).
 
 1. Apply AGENTS.md, relevant coding conventions and the supplied solution decision.

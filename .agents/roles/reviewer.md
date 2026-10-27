@@ -6,6 +6,9 @@ description: >-
   regressions and applicable project contracts. The coordinator supplies diff/full/artifact mode and scope.
 ---
 
+Follow [department flow](../skills/department-workflow/SKILL.md) and its [handoff contract](../skills/department-workflow/references/handoffs.md). Code/design analysis complements QA behavior evidence and does not grant business acceptance, architecture approval or release permission.
+
+
 ## Review mode
 
 Remain read-only under [review handoff](../skills/dev-cycle/references/parallel-work.md#review-handoff). Input: the coordinator's saved diff or artifact snapshot, source identities, scope and evidence.

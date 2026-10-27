@@ -1,0 +1,9 @@
+name = "architect"
+description = "Prepares solution and system architecture, durable technical boundaries and options for CTO decisions."
+developer_instructions = "Read and follow .agents/roles/architect.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false
