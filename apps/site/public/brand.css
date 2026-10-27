@@ -1,0 +1,86 @@
+/* Purpur is the primary brand colour, used at page scale as well as in controls. */
+:root{
+  --brand:#9d169e;
+  --brand-deep:#6f267d;
+  --brand-soft:#f1e5f3;
+  --wine:var(--brand);
+  --deep:#671270;
+  --ink:#35243b;
+  --muted:#746579;
+  --paper:#fefbfd;
+  --cream:#f3eaf4;
+  --border:#e6d7e9;
+}
+::selection{background:#9d169e;color:#fff}
+.announcement{background:var(--brand-deep);color:#fff7ff}
+.announcement span{color:#e9bfe9}
+.header{background:var(--paper);border-bottom-color:#e7d4e9}
+.brand{color:var(--brand)}
+.header-right,.desktop-nav,.mobile-nav{color:#602668}
+.cart-count{border-color:#dfbfe2}
+.mobile-nav{background:#fdf6fe}
+.hero.gift-hero{
+  width:100%;max-width:none;margin:0;
+  padding-inline:max(48px,calc((100vw - 1280px)/2));
+  background:var(--brand);color:#fff9fc;
+  border-bottom:1px solid #8b128e;
+}
+.gift-hero .eyebrow,.gift-hero .tiny-star{color:#f8dbf5}
+.gift-hero h1{color:#fffaf7}
+.gift-hero h1 em{color:#f5cfee}
+.gift-hero .hero-description{color:#f6e7f7}
+.gift-hero .hero-footnote{color:#f1d6ef}
+.gift-hero .hero-footnote .line{background:#f0c9e8}
+.gift-hero .hero-buttons .primary{background:#fff8f1;color:#7b1683;border-color:#fff8f1}
+.gift-hero .hero-buttons .primary:hover{background:#f5e1f2;border-color:#f5e1f2}
+.gift-hero .hero-buttons .text-link{color:#fff8fc;border-bottom-color:#ebc0e2}
+.gift-hero .hero-arch{background:#f0dfed}
+.gift-hero .hero-orbit{border-color:#f0c9e8b3}
+.gift-hero .art-label{color:#78247d}
+.gift-hero .art-star{color:#f8d8ed}
+.gift-hero .hero-stamp{color:#7b2183;border-color:#b06db4;background:#fff4fbf2}
+.hero-product-link{color:#fff8fc;border-top-color:#ddb1df}
+.hero-product-link small{color:#f1dbf2}
+.gift-selection{border-top:0}
+.gift-selection .eyebrow,.quality-number{color:var(--brand)}
+.gift-card .product-image,.product-image{background:var(--brand-soft)}
+.gift-card .gift-details-link{border-bottom-color:#bb79c0}
+.gift-assurance{color:#69476f;border-top-color:#e1cde5}
+.inside-section{background:var(--brand-deep);color:#fff7fc}
+.inside-section .eyebrow{color:#efc7ed}
+.inside-copy h2{color:#fff8fc}
+.inside-copy h2 em{color:#f2c3ea}
+.inside-copy>.section-intro,.flavor-list p,.inside-visual>p:last-child{color:#ebd9ee}
+.flavor-list h3{color:#fff8fc}
+.flavor-list>div>span{color:#edc3e7}
+.inside-section .ingredient-note{color:#e7cfe9;border-top-color:#a16aa9}
+.inside-section .text-link,.inside-section .zoom-hint{color:#fff4ff;border-bottom-color:#c896ce}
+.inside-visual>button{background:#f4e8f3;border-radius:48% 48% 2px 2px;padding:10px 12px 16px}
+.inside-visual .zoom-hint{color:#792083;border-bottom-color:#be8bc2}
+.quality-grid{border-color:#ddc5e2}
+.review-mark{color:var(--brand)}
+.review-grid article{border-bottom-color:#dfc9e4}
+.chips .chip.active,.add-btn{background:var(--brand);border-color:var(--brand)}
+.chip:not(.active):hover{background:#f1e1f3}
+.product-tag{background:#fff7ffed;color:#82228b}
+.story{background:#eee0f2}
+.story-copy>p:not(.eyebrow){color:#735d78}
+.story-frame{border-color:#b394bb}
+.story-caption{color:#805289}
+.wholesale{background:var(--brand)}
+.wholesale .eyebrow{color:#f2c5ef}
+.wholesale p:not(.eyebrow),.wholesale-action>small{color:#f0d8f0}
+.wholesale h2{color:#fff8fc}
+.footer.wrap{width:100%;max-width:none;padding:35px max(48px,calc((100vw - 1280px)/2)) 0;background:#51205e;color:#fff5fc}
+.footer .brand,.footer-phone{color:#fff4fb}
+.footer-main>div{color:#e9d6ed}
+.footer-main a:hover{color:#f0b8eb}
+.footer-bottom{border-top-color:#9d73a6;color:#ddc7e2}
+.detail-image,.photo-dialog img{background:var(--brand-soft)}
+.detail-info>.gift-note{background:#f2e4f4;color:#75217e}
+.variant-button[aria-pressed=true]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline-color:var(--brand)}
+.gift-hero a:focus-visible,.gift-hero button:focus-visible,.inside-section button:focus-visible,.inside-section a:focus-visible,.footer a:focus-visible{outline-color:#ffefff}
+@media(max-width:1180px){.hero.gift-hero{padding-inline:32px}.footer.wrap{padding-inline:32px}}
+@media(max-width:720px){.hero.gift-hero{padding-inline:20px}.footer.wrap{padding-inline:20px}}
+@media(max-width:480px){.inside-visual>button{padding:8px 8px 14px}.footer.wrap{padding-top:30px}}

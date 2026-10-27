@@ -1,0 +1,9 @@
+name = "reviewer"
+description = "Reviews supplied code diffs or research and design artifacts. Checks correctness, evidence, regressions and applicable project contracts. The coordinator supplies diff/full/artifact mode and scope."
+developer_instructions = "Read and follow .agents/roles/reviewer.md as the complete role contract."
+# sandbox_mode, approval_policy and mcp_servers in this file do not override the parent session. Restrict them, together with delegation, in the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

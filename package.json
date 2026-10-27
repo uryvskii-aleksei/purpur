@@ -1,0 +1,14 @@
+{
+  "name": "purpur",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Сайт Пурпур и агентская обвязка виртуального ИТ-отдела",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test .agents/hooks/scripts/format-touched.spec.js apps/site/tests/store.test.cjs",
+    "test:harness": "node --test .agents/hooks/scripts/format-touched.spec.js",
+    "test:site": "node --test apps/site/tests/store.test.cjs",
+    "check": "node --check .agents/hooks/scripts/format-touched.js && node --check scripts/serve-site.cjs && node --check apps/site/public/app.js && node --check apps/site/public/store.js && node --check apps/site/public/products.js",
+    "dev": "node scripts/serve-site.cjs"
+  }
+}

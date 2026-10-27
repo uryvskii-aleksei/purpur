@@ -1,0 +1,1381 @@
+{
+  "checkedAt": "2026-10-26",
+  "source": "https://purpur.spb.ru/magazin",
+  "sourceCategoryPages": 60,
+  "publishedCount": 221,
+  "needsPackageConfirmation": [
+    "https://purpur.spb.ru/magazin/product/apelsinovie-tsukaty-v-shokolade-v-tubuse",
+    "https://purpur.spb.ru/magazin/product/assorti-great-moscow",
+    "https://purpur.spb.ru/magazin/product/assorti-zhostovo",
+    "https://purpur.spb.ru/magazin/product/delovomu-muzhchine-portfel-chasy-konyak-karton",
+    "https://purpur.spb.ru/magazin/product/ekaterina-ii-molochnyj-tryufel-s-malinoj-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/gorkiy-tryufel-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/hozyain-v-dome-ruletka-gaechnyj-klyuch-ploskogubcy",
+    "https://purpur.spb.ru/magazin/product/lakhta",
+    "https://purpur.spb.ru/magazin/product/lyubimomu-zashchitniku-pistolet-limonka-blyaha",
+    "https://purpur.spb.ru/magazin/product/mindalnaya-halva-s-tryufelnym-kremom-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/molochnyy-tryufel-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-apelsinovymi-cukatami-i-vishnej-bez-sahara",
+    "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-keshyu-i-kofe-bez-sahara",
+    "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-zhivicej-yantarya-bez-sahara-i-zhivicej-yantarya-i-medom",
+    "https://purpur.spb.ru/magazin/product/nastoyashchemu-muzhchine-nabor-instrumentov",
+    "https://purpur.spb.ru/magazin/product/petr-i-tryufel-s-percem-i-solyu-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/real-man",
+    "https://purpur.spb.ru/magazin/product/truffle-pobeditel",
+    "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-v-temnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/molochnyy-shokolad",
+    "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-fundukom",
+    "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-malinoy-i-myatoy",
+    "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mango",
+    "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mindalem",
+    "https://purpur.spb.ru/magazin/product/temnyy-shokolad",
+    "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-apelsinovymi-tsukatami",
+    "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-fundukom",
+    "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mango",
+    "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mindalem"
+  ],
+  "excludedUnlisted": [
+    "https://purpur.spb.ru/magazin/product/tryufel-s-ekstraktom-yantarya-bez-sahara",
+    "https://purpur.spb.ru/magazin/product/tryufel-s-ekstraktom-yantarya-i-medom",
+    "https://purpur.spb.ru/magazin/product/nabor",
+    "https://purpur.spb.ru/magazin/product/test",
+    "https://purpur.spb.ru/magazin/product/iris-molochnoo-slivochnyj",
+    "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake-2",
+    "https://purpur.spb.ru/magazin/product/tryufeli-s-yagodami-i-praline-s-orehom-v-tyomnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/tryufel-i-halva-mindal",
+    "https://purpur.spb.ru/magazin/product/trio-tryufeley-malina-konyak-fistashka",
+    "https://purpur.spb.ru/magazin/product/tryufelnoe-assorti-s-marcipanom",
+    "https://purpur.spb.ru/magazin/product/shokolad-s-chia",
+    "https://purpur.spb.ru/magazin/product/molochnyj-shokolad-s-klubnikoj-i-fistashkami",
+    "https://purpur.spb.ru/magazin/product/rubinovyj-shokolad",
+    "https://purpur.spb.ru/magazin/product/marcipan-klassicheskij-v-tubuse"
+  ],
+  "products": [
+    {
+      "id": 1,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-morskaya-stolica",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 2,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-petra-tvorene",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 3,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-nevskaya-simfoniya",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 9,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-s-mindalem-v-shokolade-v-tubuse",
+      "price": 1539,
+      "weight": "150 г"
+    },
+    {
+      "id": 12,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-v-temnom-shokolade-v-tubuse",
+      "price": 1539,
+      "weight": "150 г"
+    },
+    {
+      "id": 13,
+      "url": "https://purpur.spb.ru/magazin/product/advent-kalendar-krasnyj",
+      "price": 2035,
+      "weight": "185 г"
+    },
+    {
+      "id": 14,
+      "url": "https://purpur.spb.ru/magazin/product/advent-kalendar-sinij",
+      "price": 2035,
+      "weight": "185 г"
+    },
+    {
+      "id": 15,
+      "url": "https://purpur.spb.ru/magazin/product/anichkov-most-molochno-orehovoe-praline-v-temnom-shokolade",
+      "price": 1348,
+      "weight": "150 г"
+    },
+    {
+      "id": 16,
+      "url": "https://purpur.spb.ru/magazin/product/anichkov-most-molochno-orehovoe-praline-v-temnom-shokolade-1",
+      "price": 6974,
+      "weight": "1000 г"
+    },
+    {
+      "id": 17,
+      "url": "https://purpur.spb.ru/magazin/product/apelsinovie-tsukaty-v-shokolade-v-tubuse",
+      "price": 1568,
+      "weight": null
+    },
+    {
+      "id": 19,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-great-moscow",
+      "price": 1408,
+      "weight": null
+    },
+    {
+      "id": 20,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-dyhanie-vesny",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 21,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-kapriz",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 22,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-lyubimoj",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 23,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-russkoe-nasledie",
+      "price": 1320,
+      "weight": "130 г"
+    },
+    {
+      "id": 24,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-v-stile-coco",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 25,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-vesennij-bal",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 26,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-vesennij-blyuz",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 27,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-zhenskie-tajny",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 28,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-zolotye-mechty",
+      "price": 1408,
+      "weight": "95 г"
+    },
+    {
+      "id": 29,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-zhostovo",
+      "price": 1110,
+      "weight": null
+    },
+    {
+      "id": 31,
+      "url": "https://purpur.spb.ru/magazin/product/banany-v-shokolade-v-tubuse",
+      "price": 1539,
+      "weight": "170 г"
+    },
+    {
+      "id": 39,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-s-mindalem-v-temnom-shokolade-v-tubuse",
+      "price": 1539,
+      "weight": "150 г"
+    },
+    {
+      "id": 40,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-v-shokolade-v-tubuse",
+      "price": 1539,
+      "weight": "150 г"
+    },
+    {
+      "id": 42,
+      "url": "https://purpur.spb.ru/magazin/product/delovomu-muzhchine-portfel-chasy-konyak-karton",
+      "price": 1375,
+      "weight": null
+    },
+    {
+      "id": 43,
+      "url": "https://purpur.spb.ru/magazin/product/ekaterina-ii-molochnyj-tryufel-s-malinoj-v-temnom-shokolade",
+      "price": 1535,
+      "weight": null
+    },
+    {
+      "id": 48,
+      "url": "https://purpur.spb.ru/magazin/product/gorkiy-tryufel-v-temnom-shokolade",
+      "price": 1535,
+      "weight": null
+    },
+    {
+      "id": 50,
+      "url": "https://purpur.spb.ru/magazin/product/gorod-belyh-nochej-tryufel-s-chernichnym-likerom-v-temnom-shokolade",
+      "price": 1348,
+      "weight": "150 г"
+    },
+    {
+      "id": 51,
+      "url": "https://purpur.spb.ru/magazin/product/gorod-belyh-nochej-tryufel-s-chernichnym-likerom-v-temnom-shokolade-1",
+      "price": 6974,
+      "weight": "1000 г"
+    },
+    {
+      "id": 57,
+      "url": "https://purpur.spb.ru/magazin/product/hozyain-v-dome-ruletka-gaechnyj-klyuch-ploskogubcy",
+      "price": 1265,
+      "weight": null
+    },
+    {
+      "id": 64,
+      "url": "https://purpur.spb.ru/magazin/product/lakhta",
+      "price": 1210,
+      "weight": null
+    },
+    {
+      "id": 65,
+      "url": "https://purpur.spb.ru/magazin/product/lyubimomu-zashchitniku-pistolet-limonka-blyaha",
+      "price": 1375,
+      "weight": null
+    },
+    {
+      "id": 99,
+      "url": "https://purpur.spb.ru/magazin/product/mindalnaya-halva-s-tryufelnym-kremom-v-temnom-shokolade",
+      "price": 1370,
+      "weight": null
+    },
+    {
+      "id": 101,
+      "url": "https://purpur.spb.ru/magazin/product/mini-gorkiy-shokolad",
+      "price": 6990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 102,
+      "url": "https://purpur.spb.ru/magazin/product/mini-molochniy-shokolad-1",
+      "price": 5990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 103,
+      "url": "https://purpur.spb.ru/magazin/product/mini-temniy-chocolat",
+      "price": 6190,
+      "weight": "1000 г"
+    },
+    {
+      "id": 111,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-tryufel-v-temnom-shokolade",
+      "price": 1535,
+      "weight": null
+    },
+    {
+      "id": 113,
+      "url": "https://purpur.spb.ru/magazin/product/morskaya-stolica-funduchno-arahisovaya-halva-s-tryufelnym-kremom-v-temnom-shokolade",
+      "price": 1348,
+      "weight": "150 г"
+    },
+    {
+      "id": 114,
+      "url": "https://purpur.spb.ru/magazin/product/morskaya-stolica-funduchno-arahisovaya-halva-s-tryufelnym-kremom-v-temnom-shokolade-1",
+      "price": 6974,
+      "weight": "1000 г"
+    },
+    {
+      "id": 118,
+      "url": "https://purpur.spb.ru/magazin/product/na-nevskom-molochno-kofejnyj-tryufel-v-temnom-shokolade",
+      "price": 1348,
+      "weight": "150 г"
+    },
+    {
+      "id": 119,
+      "url": "https://purpur.spb.ru/magazin/product/na-nevskom-molochno-kofejnyj-tryufel-v-temnom-shokolade-1",
+      "price": 6974,
+      "weight": "1000 г"
+    },
+    {
+      "id": 120,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-hovorod-u-elki",
+      "price": 1485,
+      "weight": "130 г"
+    },
+    {
+      "id": 121,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-kraski-peterburga",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 122,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-ogni-peterburga",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 123,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-peterburgskie-meteli",
+      "price": 1485,
+      "weight": "130 г"
+    },
+    {
+      "id": 124,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-volshebstvo-u-kamina",
+      "price": 1485,
+      "weight": "130 г"
+    },
+    {
+      "id": 125,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-zagadki-peterburga",
+      "price": 1210,
+      "weight": "95 г"
+    },
+    {
+      "id": 126,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-zamok-snezhinok",
+      "price": 1485,
+      "weight": "130 г"
+    },
+    {
+      "id": 127,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-apelsinovymi-cukatami-i-vishnej-bez-sahara",
+      "price": 1595,
+      "weight": null
+    },
+    {
+      "id": 128,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-keshyu-i-kofe-bez-sahara",
+      "price": 1595,
+      "weight": null
+    },
+    {
+      "id": 129,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-zhivicej-yantarya-bez-sahara-i-zhivicej-yantarya-i-medom",
+      "price": 1595,
+      "weight": null
+    },
+    {
+      "id": 130,
+      "url": "https://purpur.spb.ru/magazin/product/nastoyashchemu-muzhchine-nabor-instrumentov",
+      "price": 1265,
+      "weight": null
+    },
+    {
+      "id": 132,
+      "url": "https://purpur.spb.ru/magazin/product/petr-i-tryufel-s-percem-i-solyu-v-temnom-shokolade",
+      "price": 1535,
+      "weight": null
+    },
+    {
+      "id": 134,
+      "url": "https://purpur.spb.ru/magazin/product/petra-tvorene-marcipanovaya-pomadka-v-temnom-shokolade",
+      "price": 1348,
+      "weight": "150 г"
+    },
+    {
+      "id": 135,
+      "url": "https://purpur.spb.ru/magazin/product/petra-tvorene-marcipanovaya-pomadka-v-temnom-shokolade-1",
+      "price": 6974,
+      "weight": "1000 г"
+    },
+    {
+      "id": 137,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-korobka-gorodskaya-kollekciya",
+      "price": 1550,
+      "weight": "130 г"
+    },
+    {
+      "id": 138,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-upakovka-russkaya-rospis",
+      "price": 1550,
+      "weight": "130 г"
+    },
+    {
+      "id": 139,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-upakovka-velikie-mastera-rossii",
+      "price": 1550,
+      "weight": "130 г"
+    },
+    {
+      "id": 141,
+      "url": "https://purpur.spb.ru/magazin/product/praline-s-kokosom-i-fundukom-v-temnom-shokolade",
+      "price": 1495,
+      "weight": "150 г"
+    },
+    {
+      "id": 142,
+      "url": "https://purpur.spb.ru/magazin/product/praline-s-kokosom-i-fundukom-v-temnom-shokolade-1",
+      "price": 7722,
+      "weight": "1000 г"
+    },
+    {
+      "id": 143,
+      "url": "https://purpur.spb.ru/magazin/product/real-man",
+      "price": 1419,
+      "weight": null
+    },
+    {
+      "id": 144,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-grad-petrov",
+      "price": 1210,
+      "weight": "130 г"
+    },
+    {
+      "id": 145,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-moskva-lyubov-moya",
+      "price": 1210,
+      "weight": "130 г"
+    },
+    {
+      "id": 146,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-simvoly-rossii",
+      "price": 1110,
+      "weight": "130 г"
+    },
+    {
+      "id": 147,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-velikie-monarhi-rossii",
+      "price": 1110,
+      "weight": "130 г"
+    },
+    {
+      "id": 159,
+      "url": "https://purpur.spb.ru/magazin/product/truffle-pobeditel",
+      "price": 1419,
+      "weight": null
+    },
+    {
+      "id": 164,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij-v-podarochnoj-upakovke",
+      "price": 1408,
+      "weight": "150 г"
+    },
+    {
+      "id": 166,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara-3",
+      "price": 1485,
+      "weight": "150 г"
+    },
+    {
+      "id": 170,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake-3",
+      "price": 1495,
+      "weight": "150 г"
+    },
+    {
+      "id": 173,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami-v-podarochnoj-upakovke",
+      "price": 1408,
+      "weight": "150 г"
+    },
+    {
+      "id": 174,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkoj-v-temnom-shokolade",
+      "price": 1495,
+      "weight": "150 г"
+    },
+    {
+      "id": 175,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkoj-v-temnom-shokolade-1",
+      "price": 7722,
+      "weight": "1000 г"
+    },
+    {
+      "id": 177,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara-3",
+      "price": 1485,
+      "weight": "150 г"
+    },
+    {
+      "id": 179,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-v-temnom-shokolade",
+      "price": 1370,
+      "weight": null
+    },
+    {
+      "id": 181,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara-3",
+      "price": 1485,
+      "weight": "150 г"
+    },
+    {
+      "id": 186,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-v-podarochnoj-upakovke",
+      "price": 1408,
+      "weight": "150 г"
+    },
+    {
+      "id": 187,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-v-temnom-shokolade",
+      "price": 1495,
+      "weight": "150 г"
+    },
+    {
+      "id": 198,
+      "url": "https://purpur.spb.ru/magazin/product/velikij-pushkin-tryufel-klassicheskij-v-temnom-shokolade-95",
+      "price": 1200,
+      "weight": "95 г"
+    },
+    {
+      "id": 4,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 5,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-apelsin-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 6,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 7,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-klyukvoj-v-yagodnom-likere",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 8,
+      "url": "https://purpur.spb.ru/magazin/product/yekaterina-ii-molochnyy-tryufel-v-temnom-shokolade-s-malinoy-1",
+      "price": 6952,
+      "weight": "1000 г"
+    },
+    {
+      "id": 10,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-s-mindalem-v-temnom-shokolade",
+      "price": 5290,
+      "weight": "1000 г"
+    },
+    {
+      "id": 11,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-v-temnom-shokolade",
+      "price": 4990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 18,
+      "url": "https://purpur.spb.ru/magazin/product/arahisovoe-praline-s-vishnej-i-merengami-v-temnom-shokolade",
+      "price": 5231,
+      "weight": "1000 г"
+    },
+    {
+      "id": 30,
+      "url": "https://purpur.spb.ru/magazin/product/banan-v-temnom-shokolade",
+      "price": 5090,
+      "weight": "1000 г"
+    },
+    {
+      "id": 32,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-apelsinom",
+      "price": 208,
+      "weight": "50 г"
+    },
+    {
+      "id": 33,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-apelsinom-v-shokolade",
+      "price": 242,
+      "weight": "50 г"
+    },
+    {
+      "id": 34,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-bananom",
+      "price": 208,
+      "weight": "50 г"
+    },
+    {
+      "id": 35,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-bananom-v-shokolade",
+      "price": 242,
+      "weight": "50 г"
+    },
+    {
+      "id": 36,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-grusha-s-apelsinom",
+      "price": 208,
+      "weight": "50 г"
+    },
+    {
+      "id": 37,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-grusha-s-apelsinom-v-shokolade",
+      "price": 242,
+      "weight": "50 г"
+    },
+    {
+      "id": 38,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-s-mindalem-v-temnom-shokolade",
+      "price": 5790,
+      "weight": "1000 г"
+    },
+    {
+      "id": 41,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-v-temnom-shokolade",
+      "price": 5290,
+      "weight": "1000 г"
+    },
+    {
+      "id": 44,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnoe-praline-s-kukuruznoj-kroshkoj-v-molochnom-shokolade",
+      "price": 5231,
+      "weight": "1000 г"
+    },
+    {
+      "id": 45,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnoe-praline-s-zernami-kofe-v-molochnom-shokolade",
+      "price": 5231,
+      "weight": "1000 г"
+    },
+    {
+      "id": 46,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnyj-krem-s-kukuruznoj-kroshkoj-v-molochnom-shokolade",
+      "price": 6500,
+      "weight": "1000 г"
+    },
+    {
+      "id": 47,
+      "url": "https://purpur.spb.ru/magazin/product/gorkij-tryufel-s-konyakom",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 49,
+      "url": "https://purpur.spb.ru/magazin/product/gorkiy-tryufel-v-temnom-shokolade-2",
+      "price": 6226,
+      "weight": "1000 г"
+    },
+    {
+      "id": 52,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-gorkij-tryufel-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 53,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-molochnyj-tryufel-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 54,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-tryufel-s-konyakom-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 55,
+      "url": "https://purpur.spb.ru/magazin/product/gzhel-tryufel-s-cukatami-kryzhovnika-v-temnom-shokolade",
+      "price": 7445,
+      "weight": "1000 г"
+    },
+    {
+      "id": 56,
+      "url": "https://purpur.spb.ru/magazin/product/hohloma-molochno-orehovoe-praline-v-temnom-shokolade",
+      "price": 7445,
+      "weight": "1000 г"
+    },
+    {
+      "id": 58,
+      "url": "https://purpur.spb.ru/magazin/product/koshka-pishka-shokoladniyiris-temnom-shokolade",
+      "price": 4609,
+      "weight": "1000 г"
+    },
+    {
+      "id": 59,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-arahis-s-solenoj-karamelyu",
+      "price": 941,
+      "weight": "220 г"
+    },
+    {
+      "id": 60,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-fundukom-bez-sahara",
+      "price": 1018,
+      "weight": "220 г"
+    },
+    {
+      "id": 61,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-fundukom78",
+      "price": 941,
+      "weight": "220 г"
+    },
+    {
+      "id": 62,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-keshyu",
+      "price": 1018,
+      "weight": "220 г"
+    },
+    {
+      "id": 63,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-temnyj-shokolad-s-mindalem",
+      "price": 941,
+      "weight": "220 г"
+    },
+    {
+      "id": 66,
+      "url": "https://purpur.spb.ru/magazin/product/mango-marakuyya-marmelad-v-shokolade-ves",
+      "price": 4609,
+      "weight": "1000 г"
+    },
+    {
+      "id": 67,
+      "url": "https://purpur.spb.ru/magazin/product/mango-v-temnom-shokolade",
+      "price": 5280,
+      "weight": "1000 г"
+    },
+    {
+      "id": 68,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-klassicheskij",
+      "price": 149,
+      "weight": "45 г"
+    },
+    {
+      "id": 69,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-ananasom",
+      "price": 248,
+      "weight": "50 г"
+    },
+    {
+      "id": 70,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-ananasom-v-shokolade",
+      "price": 274,
+      "weight": "50 г"
+    },
+    {
+      "id": 71,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-apelsinom",
+      "price": 248,
+      "weight": "50 г"
+    },
+    {
+      "id": 72,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-apelsinom-v-shokolade",
+      "price": 274,
+      "weight": "50 г"
+    },
+    {
+      "id": 73,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-fistashkoj-v-temnom-shokolade",
+      "price": 209,
+      "weight": "45 г"
+    },
+    {
+      "id": 74,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-klyukvoj",
+      "price": 248,
+      "weight": "50 г"
+    },
+    {
+      "id": 75,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-klyukvoj-v-shokolade",
+      "price": 274,
+      "weight": "50 г"
+    },
+    {
+      "id": 76,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-marakujej-v-temnom-shokolade",
+      "price": 209,
+      "weight": "45 г"
+    },
+    {
+      "id": 77,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-sushenymi-fruktami-v-temnom-shokolade",
+      "price": 209,
+      "weight": "45 г"
+    },
+    {
+      "id": 78,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-v-temnom-shokolade",
+      "price": 209,
+      "weight": "45 г"
+    },
+    {
+      "id": 79,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-vanilnyj-mindal",
+      "price": 198,
+      "weight": "50 г"
+    },
+    {
+      "id": 80,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-vanilnyj-mindal-v-shokolade",
+      "price": 274,
+      "weight": "50 г"
+    },
+    {
+      "id": 81,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-ananas-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 82,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-ananas-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 83,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-apelsin-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 84,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-chernaya-smorodina-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 85,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-chernaya-smorodina-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 86,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-grusha-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 87,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-grusha-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 88,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-klyukva-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 89,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-klyukva-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 90,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-krasnaya-smorodina-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 91,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-krasnaya-smorodina-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 92,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-limon-imbir-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 93,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-limon-imbir-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 94,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-temnom-shokolade-ves",
+      "price": 4609,
+      "weight": "1000 г"
+    },
+    {
+      "id": 95,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-mango-marakujya-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 96,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-mango-marakujya-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 97,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-zelenoe-yabloko-v-kokosovoj-struzhke",
+      "price": 769,
+      "weight": "75 г"
+    },
+    {
+      "id": 98,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-zelenoe-yabloko-v-temnom-shokolade",
+      "price": 967,
+      "weight": "110 г"
+    },
+    {
+      "id": 100,
+      "url": "https://purpur.spb.ru/magazin/product/mindalnoe-praline-v-molochnom-shokolade",
+      "price": 5231,
+      "weight": "1000 г"
+    },
+    {
+      "id": 104,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyj-tryufel-s-kokosom-i-mindalem",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 105,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyj-tryufel-s-vafelnoj-kroshkoj-i-fundukom",
+      "price": 6770,
+      "weight": "1000 г"
+    },
+    {
+      "id": 106,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad",
+      "price": 495,
+      "weight": null
+    },
+    {
+      "id": 107,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-fundukom",
+      "price": 515,
+      "weight": null
+    },
+    {
+      "id": 108,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-malinoy-i-myatoy",
+      "price": 525,
+      "weight": null
+    },
+    {
+      "id": 109,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mango",
+      "price": 540,
+      "weight": null
+    },
+    {
+      "id": 110,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mindalem",
+      "price": 515,
+      "weight": null
+    },
+    {
+      "id": 112,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-tryufel-v-temnom-shokolade-2",
+      "price": 6226,
+      "weight": "1000 г"
+    },
+    {
+      "id": 115,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-praline-s-greckim-orehom-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 116,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-tryufel-s-klyukvoj-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 117,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-tryufel-s-vodkoj-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 131,
+      "url": "https://purpur.spb.ru/magazin/product/paleh-tryufel-klassicheskij-s-vodkoj-v-temnom-shokolade",
+      "price": 7445,
+      "weight": "1000 г"
+    },
+    {
+      "id": 133,
+      "url": "https://purpur.spb.ru/magazin/product/petr-i-tryufeli-v-temnom-shokolade-1",
+      "price": 6226,
+      "weight": "1000 г"
+    },
+    {
+      "id": 136,
+      "url": "https://purpur.spb.ru/magazin/product/pisateli-rossii-praline-s-greckim-orehom-v-temnom-shokolade",
+      "price": 6300,
+      "weight": "1000 г"
+    },
+    {
+      "id": 140,
+      "url": "https://purpur.spb.ru/magazin/product/poety-rossii-tryufel-s-klyukvoj-v-temnom-shokolade",
+      "price": 6300,
+      "weight": "1000 г"
+    },
+    {
+      "id": 148,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnyj-batonchik-bez-sahara-dubajskij-shokolad",
+      "price": 215,
+      "weight": "35 г"
+    },
+    {
+      "id": 149,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnyj-batonchik-dubajskij-shokolad",
+      "price": 215,
+      "weight": "35 г"
+    },
+    {
+      "id": 150,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-molochnyj-tryufel-s-malinoj-i-marmeladnymi-kaplyami-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 151,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-praline-s-kedrovym-orehom-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 152,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-tryufel-s-kryzhovnikom-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 153,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad",
+      "price": 525,
+      "weight": null
+    },
+    {
+      "id": 154,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-apelsinovymi-tsukatami",
+      "price": 545,
+      "weight": null
+    },
+    {
+      "id": 155,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-fundukom",
+      "price": 545,
+      "weight": null
+    },
+    {
+      "id": 156,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mango",
+      "price": 560,
+      "weight": null
+    },
+    {
+      "id": 157,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mindalem",
+      "price": 545,
+      "weight": null
+    },
+    {
+      "id": 158,
+      "url": "https://purpur.spb.ru/magazin/product/truffle-kedr-bez-sahara-ves",
+      "price": 7970,
+      "weight": "1000 г"
+    },
+    {
+      "id": 160,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-mandarinovyj",
+      "price": 1170,
+      "weight": "130 г"
+    },
+    {
+      "id": 161,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-mandarinovyj-1",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 162,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij",
+      "price": 1170,
+      "weight": "130 г"
+    },
+    {
+      "id": 163,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij-1",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 165,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara",
+      "price": 7753,
+      "weight": "1000 г"
+    },
+    {
+      "id": 167,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara-4",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 168,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-v-temnom-shokolade",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 169,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 171,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami",
+      "price": 1170,
+      "weight": "130 г"
+    },
+    {
+      "id": 172,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami-1",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 176,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara",
+      "price": 7753,
+      "weight": "1000 г"
+    },
+    {
+      "id": 178,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara-4",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 180,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara",
+      "price": 7753,
+      "weight": "1000 г"
+    },
+    {
+      "id": 182,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara-4",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 183,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kolumbijskim-kofe",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 184,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj",
+      "price": 1170,
+      "weight": "130 г"
+    },
+    {
+      "id": 185,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-1",
+      "price": 7447,
+      "weight": "1000 г"
+    },
+    {
+      "id": 188,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishnej-bez-sahara",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 189,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishney-bez-sahara-v-temnom-chocolade",
+      "price": 7753,
+      "weight": "1000 г"
+    },
+    {
+      "id": 190,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishney-v-temnom-chocolade",
+      "price": 7689,
+      "weight": "1000 г"
+    },
+    {
+      "id": 191,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-zhivicej-yantarya-bez-sahara",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 192,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-zhivicej-yantarya-i-medom",
+      "price": 6589,
+      "weight": "1000 г"
+    },
+    {
+      "id": 193,
+      "url": "https://purpur.spb.ru/magazin/product/tsukaty-apelsinovaya-korochka-v-temnom-shokolade",
+      "price": 6270,
+      "weight": "1000 г"
+    },
+    {
+      "id": 194,
+      "url": "https://purpur.spb.ru/magazin/product/tsukaty-limonnaya-korochka-v-temnom-shokolade",
+      "price": 6270,
+      "weight": "1000 г"
+    },
+    {
+      "id": 195,
+      "url": "https://purpur.spb.ru/magazin/product/velikie-monarhi-rossii-ekaterina-ii-molochnyj-tryufel-s-malinoj-i-marmeladnymi-kaplyami-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 196,
+      "url": "https://purpur.spb.ru/magazin/product/velikie-monarhi-rossii-petr-i-gorkij-tryufel-s-morskoj-solyu-i-kajenskim-percem-v-temnom-shokolade",
+      "price": 6848,
+      "weight": "1000 г"
+    },
+    {
+      "id": 197,
+      "url": "https://purpur.spb.ru/magazin/product/velikij-pushkin-tryufel-klassicheskij-v-temnom-shokolade-1",
+      "price": 6300,
+      "weight": "1000 г"
+    },
+    {
+      "id": 199,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoj-molochnyj-shokolad",
+      "price": 4609,
+      "weight": "1000 г"
+    },
+    {
+      "id": 200,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad",
+      "price": 4896,
+      "weight": "1000 г"
+    },
+    {
+      "id": 201,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-fundukom",
+      "price": 5200,
+      "weight": "1000 г"
+    },
+    {
+      "id": 202,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-izyumom",
+      "price": 4890,
+      "weight": "1000 г"
+    },
+    {
+      "id": 203,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-keshyu",
+      "price": 5100,
+      "weight": "1000 г"
+    },
+    {
+      "id": 204,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-malinoy",
+      "price": 6220,
+      "weight": "1000 г"
+    },
+    {
+      "id": 205,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-mango",
+      "price": 5850,
+      "weight": "1000 г"
+    },
+    {
+      "id": 206,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-mindalem",
+      "price": 5100,
+      "weight": "1000 г"
+    },
+    {
+      "id": 207,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-pekanom",
+      "price": 5550,
+      "weight": "1000 г"
+    },
+    {
+      "id": 208,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-sushenoy-klyukvoy",
+      "price": 4950,
+      "weight": "1000 г"
+    },
+    {
+      "id": 209,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad",
+      "price": 5990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 210,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-fundukom",
+      "price": 5615,
+      "weight": "1000 г"
+    },
+    {
+      "id": 211,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-izyumom",
+      "price": 5315,
+      "weight": "1000 г"
+    },
+    {
+      "id": 212,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-keshyu",
+      "price": 5515,
+      "weight": "1000 г"
+    },
+    {
+      "id": 213,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-malinoy",
+      "price": 6740,
+      "weight": "1000 г"
+    },
+    {
+      "id": 214,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-mango",
+      "price": 6380,
+      "weight": "1000 г"
+    },
+    {
+      "id": 215,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-mindalem",
+      "price": 5515,
+      "weight": "1000 г"
+    },
+    {
+      "id": 216,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-pekanom",
+      "price": 6000,
+      "weight": "1000 г"
+    },
+    {
+      "id": 217,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-sushenoy-klyukvoy",
+      "price": 5380,
+      "weight": "1000 г"
+    },
+    {
+      "id": 218,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-s-yagodami-chernoj-smorodiny-v-temnom-shokolade",
+      "price": 3990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 219,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-s-yagodami-klykvi-v-temnom-shokolade",
+      "price": 3990,
+      "weight": "1000 г"
+    },
+    {
+      "id": 220,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-vanilnyj-v-temnom-shokolade",
+      "price": 3630,
+      "weight": "1000 г"
+    },
+    {
+      "id": 221,
+      "url": "https://purpur.spb.ru/magazin/product/zhostovo-molochno-slivochnyj-tryufel-v-temnom-shokolade",
+      "price": 7445,
+      "weight": "1000 г"
+    }
+  ]
+}

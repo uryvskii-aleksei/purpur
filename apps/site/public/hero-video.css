@@ -1,0 +1,21 @@
+/* Real factory footage behind the gift proposition. Purple carries the brand. */
+.hero.gift-hero.video-hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;min-height:640px;padding-block:58px 84px;background:#39103e}
+.video-hero .hero-video{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none}
+.video-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(48,7,55,.82) 0%,rgba(59,8,67,.76) 32%,rgba(73,12,78,.35) 62%,rgba(42,8,46,.1) 100%)}
+.video-hero::after{content:"";position:absolute;inset:auto 0 0;height:150px;z-index:-1;background:linear-gradient(transparent,rgba(40,5,46,.35));pointer-events:none}
+.video-hero .hero-copy{position:relative;max-width:560px;padding:0;z-index:1}
+.gift-hero.video-hero h1{font-size:clamp(52px,5.2vw,74px);line-height:1.08;margin:20px 0 24px;letter-spacing:-2px;color:#fff}
+.gift-hero.video-hero h1 em{color:#f8d9ef}
+.gift-hero.video-hero .hero-description{max-width:485px;color:#fff;line-height:1.75}
+.gift-hero.video-hero .eyebrow{color:#fff;max-width:520px}
+.gift-hero.video-hero .hero-buttons{margin-top:28px;gap:26px;flex-wrap:wrap}
+.gift-hero.video-hero .hero-buttons .primary{padding:15px 25px;background:#fff7ee;color:#701078;border-color:#fff7ee;box-shadow:0 3px 16px #21032333}
+.gift-hero.video-hero .hero-buttons .primary:hover{background:#f6e0f0;border-color:#f6e0f0}
+.gift-hero.video-hero .hero-buttons .text-link{color:#fff;min-height:48px;display:inline-flex;align-items:center;gap:14px}
+.gift-hero.video-hero .hero-footnote{display:flex;color:#f4e6f5;margin-top:28px}
+.hero-video-toggle{position:absolute;right:max(48px,calc((100vw - 1280px)/2));bottom:24px;z-index:2;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:9px 16px;border:1px solid #ffffff8c;border-radius:30px;background:#300838b8;color:#fff;font-size:14px;line-height:1.5;backdrop-filter:blur(8px)}
+.hero-video-toggle:hover{background:#5f166ce6}.hero-video-toggle [data-video-symbol]{width:15px;text-align:center}
+.video-hero a:focus-visible,.hero-video-toggle:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:980px){.hero.gift-hero.video-hero{min-height:620px;padding-inline:32px}.video-hero::before{background:linear-gradient(90deg,#300737d1,#3b0843c2 42%,#490c4e38)}.hero-video-toggle{right:32px}}
+@media(max-width:720px){.hero.gift-hero.video-hero{min-height:610px;padding:40px 24px 90px}.gift-hero.video-hero h1{font-size:54px}.video-hero::before{background:linear-gradient(90deg,#300737cc,#3b0843b8 75%,#490c4eab)}.hero-video-toggle{right:24px;bottom:22px}.gift-hero.video-hero .hero-description{max-width:450px}.gift-hero.video-hero .hero-footnote{display:none}}
+@media(max-width:480px){.hero.gift-hero.video-hero{min-height:620px;padding:32px 20px 90px}.gift-hero.video-hero h1{font-size:clamp(42px,12.6vw,54px);letter-spacing:-1.3px;margin:20px 0 22px}.gift-hero.video-hero .eyebrow{font-size:12px!important;line-height:1.8;max-width:310px}.gift-hero.video-hero .hero-description{font-size:16px!important;line-height:1.8}.gift-hero.video-hero .hero-buttons{gap:16px 24px;margin-top:25px}.gift-hero.video-hero .hero-buttons .primary{padding:14px 22px}.hero-video-toggle{right:20px;bottom:20px}.video-hero .hero-video{object-position:58% center}}

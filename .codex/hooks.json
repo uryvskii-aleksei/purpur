@@ -1,0 +1,16 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "node \"$(git rev-parse --show-toplevel)/.agents/hooks/scripts/format-touched.js\" --runtime codex",
+                        "timeout": 30
+                    }
+                ],
+                "matcher": "ApplyPatch|apply_patch"
+            }
+        ]
+    }
+}

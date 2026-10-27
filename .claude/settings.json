@@ -1,0 +1,16 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "node \"$CLAUDE_PROJECT_DIR/.agents/hooks/scripts/format-touched.js\" --runtime claude",
+                        "timeout": 30
+                    }
+                ],
+                "matcher": "Edit|Write"
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "hooks": {
+        "afterFileEdit": [
+            {
+                "command": "node \".agents/hooks/scripts/format-touched.js\" --runtime cursor",
+                "timeout": 30
+            }
+        ]
+    }
+}
