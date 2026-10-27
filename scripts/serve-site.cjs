@@ -26,8 +26,22 @@ const server = http.createServer((request, response) => {
     }
     let file;
     try {
-        const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
-        const candidate = path.resolve(root, `.${pathname === '/' ? '/index.html' : pathname}`);
+        const url = new URL(request.url, 'http://localhost');
+        const pathname = decodeURIComponent(url.pathname);
+        const requested = path.resolve(root, `.${pathname}`);
+        const directory = fs.statSync(requested).isDirectory();
+        if (directory) {
+            const relative = path.relative(root, fs.realpathSync(requested));
+            if (relative.startsWith('..') || path.isAbsolute(relative)) {
+                response.writeHead(403).end();
+                return;
+            }
+            if (!url.pathname.endsWith('/')) {
+                response.writeHead(308, { Location: `${url.pathname}/${url.search}` }).end();
+                return;
+            }
+        }
+        const candidate = directory ? path.join(requested, 'index.html') : requested;
         file = fs.realpathSync(candidate);
         const relative = path.relative(root, file);
         if (relative.startsWith('..') || path.isAbsolute(relative)) {
