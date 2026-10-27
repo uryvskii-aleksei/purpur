@@ -1,0 +1,9 @@
+name = "designer"
+description = "Designs accessible user journeys, responsive interfaces and Purpur brand assets from requirements and verified content."
+developer_instructions = "Read and follow .agents/roles/designer.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

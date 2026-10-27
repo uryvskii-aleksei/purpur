@@ -1,0 +1,9 @@
+name = "qa"
+description = "Independently verifies business and user scenarios against a specific build, reporting reproducible defects and evidence gaps."
+developer_instructions = "Read and follow .agents/roles/qa.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

@@ -8,7 +8,8 @@
     "test": "node --test .agents/hooks/scripts/format-touched.spec.js apps/site/tests/store.test.cjs",
     "test:harness": "node --test .agents/hooks/scripts/format-touched.spec.js",
     "test:site": "node --test apps/site/tests/store.test.cjs",
-    "check": "node --check .agents/hooks/scripts/format-touched.js && node --check scripts/serve-site.cjs && node --check apps/site/public/app.js && node --check apps/site/public/store.js && node --check apps/site/public/products.js",
+    "check": "npm run check:agents && node --check .agents/hooks/scripts/format-touched.js && node --check scripts/serve-site.cjs && node --check apps/site/public/app.js && node --check apps/site/public/store.js && node --check apps/site/public/products.js",
+    "check:agents": "node scripts/check-agents.cjs",
     "dev": "node scripts/serve-site.cjs"
   }
 }

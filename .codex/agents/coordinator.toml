@@ -1,0 +1,9 @@
+name = "coordinator"
+description = "Coordinates scoped IT work, role handoffs, evidence and consolidated CTO decisions."
+developer_instructions = "Read and follow .agents/roles/coordinator.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false

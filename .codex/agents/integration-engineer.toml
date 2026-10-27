@@ -1,0 +1,9 @@
+name = "integration-engineer"
+description = "Designs and implements assigned inter-system mappings, contracts, synchronization and failure recovery."
+developer_instructions = "Read and follow .agents/roles/integration-engineer.md as the complete role contract."
+# Runtime permissions and MCP access are constrained by the parent session.
+
+[features]
+apps = false
+plugins = false
+request_permissions_tool = false
