@@ -2,7 +2,8 @@
   'use strict';
 
   const store = typeof module !== 'undefined' && module.exports ? require('../store.js') : root.PurpurStore;
-  const retailDefaults = { name: '', phone: '', delivery: 'pickup', city: '', email: '', date: '', notes: '' };
+  const retailDefaults = { name: '', phone: '', delivery: 'spb', city: '', email: '', date: '', notes: '' };
+  const deliveryMethods = ['spb', 'region', 'pickup'];
   const businessDefaults = { name: '', contact: '', company: '', details: '' };
   const limits = { name: 100, phone: 40, city: 150, email: 150, date: 10, notes: 1500, contact: 150, company: 150, details: 1500 };
   const money = value => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
@@ -15,7 +16,7 @@
     for (const key of Object.keys(defaults)) {
       if (typeof update[key] === 'string') next[key] = update[key].slice(0, limits[key] || 30);
     }
-    if ('delivery' in next && !['pickup', 'cdek'].includes(next.delivery)) next.delivery = 'pickup';
+    if ('delivery' in next && !deliveryMethods.includes(next.delivery)) next.delivery = 'spb';
     return next;
   }
 
@@ -23,7 +24,7 @@
     const errors = {};
     if (!clean(draft.name)) errors.name = 'Укажите, как к вам обращаться.';
     if (!validPhone(draft.phone)) errors.phone = 'Укажите телефон: от 10 до 15 цифр.';
-    if (draft.delivery === 'cdek' && !clean(draft.city)) errors.city = 'Укажите город доставки.';
+    if (draft.delivery !== 'pickup' && !clean(draft.city)) errors.city = 'Укажите город или пункт выдачи.';
     if (clean(draft.email) && !validEmail(draft.email)) errors.email = 'Проверьте адрес электронной почты.';
     return errors;
   }
@@ -90,7 +91,8 @@
           'Розничная заявка «Пурпур»',
           `Имя: ${draft.name}`,
           `Телефон: ${draft.phone}`,
-          `Получение: ${draft.delivery === 'pickup' ? 'самовывоз с фабрики' : 'доставка СДЭК'}`,
+          `Получение: ${draft.delivery === 'pickup' ? 'самовывоз с фабрики' : draft.delivery === 'region' ? 'СДЭК в другой город России' : 'ПВЗ СДЭК по Санкт-Петербургу'}`,
+          store.shipping(basket.total, draft.delivery),
         ];
         if (draft.city) lines.push(`Город: ${draft.city}`);
         if (draft.date) lines.push(`Желаемая дата: ${draft.date}`);
@@ -98,7 +100,7 @@
         if (draft.notes) lines.push(`Пожелания: ${draft.notes}`);
         lines.push('', 'Состав заявки:');
         basket.items.forEach(item => lines.push(`${item.name} · ${item.weight} · ${item.quantity} шт. × ${money(item.price)} = ${money(item.subtotal)}`));
-        lines.push('', `Итого по каталогу: ${money(basket.total)}.`, 'Наличие, итоговую стоимость, получение и срок подтвердит менеджер. Оплата не произведена.');
+        lines.push('', `Итого по каталогу: ${money(basket.total)}.`, 'Оплата картой на сайте, как в действующем магазине. Эта демонстрация платёж не проводит. Наличие и итоговую сумму подтвердит менеджер.');
         return lines.join('\n');
       },
       businessDraft(type) { return { ...business[typeKey(type)] }; },

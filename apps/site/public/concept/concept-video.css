@@ -11,10 +11,20 @@
 .video-hero .hero-copy {
   max-width: 560px;
   padding: 32px 36px;
-  background: rgba(255,253,251,.96);
+  background: none;
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 0 20px 14px rgba(255,253,251,.96);
+  border-radius: 0;
+  box-shadow: none;
+}
+/* Размывается только подложка, текст и кнопки остаются резкими. */
+.video-hero .hero-copy::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -110px -150px;
+  background: radial-gradient(ellipse at center, rgba(255,253,251,1) 0%, rgba(255,253,251,.97) 46%, rgba(255,253,251,.62) 68%, rgba(255,253,251,0) 88%);
+  filter: blur(24px);
+  pointer-events: none;
 }
 .gift-hero.video-hero h1 {
   color: var(--purple-deep);
@@ -57,6 +67,7 @@
     border-radius: 0;
     box-shadow: none;
   }
+  .video-hero .hero-copy::before { display: none; }
   .hero-video-toggle { top: 160px; bottom: auto; right: 20px; }
   .gift-hero.video-hero h1 { font-size: 40px; letter-spacing: -1.3px; }
 }

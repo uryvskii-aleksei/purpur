@@ -167,28 +167,58 @@
     session.saveRetail(values);
   }
 
+  function showFieldError(element, message) {
+    const label = element.closest('.field');
+    if (!label) return;
+    let note = label.querySelector('.field-error');
+    if (!message) {
+      element.removeAttribute('aria-invalid');
+      element.removeAttribute('aria-describedby');
+      note?.remove();
+      return;
+    }
+    if (!note) {
+      note = document.createElement('span');
+      note.className = 'field-error';
+      label.append(note);
+    }
+    note.id = `${element.name}-error`;
+    note.textContent = message;
+    element.setAttribute('aria-invalid', 'true');
+    element.setAttribute('aria-describedby', note.id);
+  }
+
   function applyErrors(form, errors) {
-    for (const element of form.elements) if (typeof element.setCustomValidity === 'function') element.setCustomValidity(errors[element.name] || '');
-    form.reportValidity();
+    let first = null;
+    for (const element of form.elements) {
+      if (typeof element.setCustomValidity !== 'function' || !element.name) continue;
+      element.setCustomValidity('');
+      const message = errors[element.name] || '';
+      showFieldError(element, message);
+      if (message && !first) first = element;
+    }
+    first?.focus();
   }
 
   function renderCheckout() {
     const draft = session.retailDraft();
     const { total, count } = session.summary();
     $('#cart-title').textContent = 'Оформление заявки';
-    $('#cart-content').innerHTML = `<button type="button" class="back-button" data-back>← Вернуться к корзине</button><div class="checkout-steps"><span>1. Ваш выбор</span><span class="current">2. Контакт и получение</span></div><form id="checkout-form"><div class="field-row"><label class="field">Ваше имя<input name="name" required maxlength="100" autocomplete="name" value="${esc(draft.name)}"></label><label class="field">Телефон<input name="phone" type="tel" required maxlength="40" autocomplete="tel" placeholder="+7 (___) ___-__-__" value="${esc(draft.phone)}"></label></div><label class="field">Как получить<select name="delivery"><option value="pickup" ${draft.delivery === 'pickup' ? 'selected' : ''}>Самовывоз с фабрики</option><option value="cdek" ${draft.delivery === 'cdek' ? 'selected' : ''}>Доставка СДЭК</option></select></label><label class="field" id="checkout-city-field" ${draft.delivery === 'pickup' ? 'hidden' : ''}>Город доставки<input name="city" maxlength="150" autocomplete="address-level2" value="${esc(draft.city)}" ${draft.delivery === 'cdek' ? 'required' : ''}></label><details class="checkout-optionals" ${draft.email || draft.date || draft.notes ? 'open' : ''}><summary>Добавить пожелания <span class="optional">необязательно +</span></summary><label class="field">Желаемая дата<input name="date" type="date" value="${esc(draft.date)}"></label><label class="field">E-mail<input name="email" type="email" maxlength="150" autocomplete="email" value="${esc(draft.email)}"></label><label class="field">Пожелания<textarea name="notes" rows="3" maxlength="1500">${esc(draft.notes)}</textarea></label></details><div class="checkout-summary">${count} шт. по каталогу · <strong>${money(total)}</strong><p class="cart-note" id="checkout-delivery-note">${draft.delivery === 'pickup' ? 'Самовывоз: Новоселье, Институтская ул., 1, к. 2. Дождитесь подтверждения готовности.' : 'Доставка по тарифу СДЭК. Готовность, срок, стоимость и термоупаковку подтвердит менеджер.'}</p></div><p class="demo-note">Это демонстрация. На следующем шаге будет подготовлен текст заявки. Фабрика его ещё не получит.</p><button type="submit" class="btn primary cart-action">Подготовить заявку <span aria-hidden="true">→</span></button></form>`;
+    $('#cart-content').innerHTML = `<button type="button" class="back-button" data-back>← Вернуться к корзине</button><div class="checkout-steps"><span>1. Ваш выбор</span><span class="current">2. Контакт и получение</span></div><form id="checkout-form" novalidate><div class="field-row"><label class="field">Ваше имя<input name="name" required maxlength="100" autocomplete="name" value="${esc(draft.name)}"></label><label class="field">Телефон<input name="phone" type="tel" required maxlength="40" autocomplete="tel" placeholder="+7 (___) ___-__-__" value="${esc(draft.phone)}"></label></div><label class="field">Как получить<select name="delivery"><option value="spb" ${draft.delivery === 'spb' ? 'selected' : ''}>ПВЗ СДЭК в Санкт-Петербурге</option><option value="region" ${draft.delivery === 'region' ? 'selected' : ''}>СДЭК в другой город России</option><option value="pickup" ${draft.delivery === 'pickup' ? 'selected' : ''}>Самовывоз с фабрики</option></select></label><label class="field" id="checkout-city-field" ${draft.delivery === 'pickup' ? 'hidden' : ''}>Город доставки<input name="city" maxlength="150" autocomplete="address-level2" value="${esc(draft.city)}" ${draft.delivery === 'cdek' ? 'required' : ''}></label><details class="checkout-optionals" ${draft.email || draft.date || draft.notes ? 'open' : ''}><summary>Добавить пожелания <span class="optional">необязательно +</span></summary><label class="field">Желаемая дата<input name="date" type="date" value="${esc(draft.date)}"></label><label class="field">E-mail<input name="email" type="email" maxlength="150" autocomplete="email" value="${esc(draft.email)}"></label><label class="field">Пожелания<textarea name="notes" rows="3" maxlength="1500">${esc(draft.notes)}</textarea></label></details><div class="checkout-summary">${count} шт. по каталогу · <strong>${money(total)}</strong><p class="cart-note" id="checkout-delivery-note">${esc(store.shipping(session.summary().total, draft.delivery))}</p></div><p class="demo-note">Оплата картой на сайте сохраняется, как в действующем магазине. Эта демонстрация деньги не списывает и заявку фабрике не отправляет.</p><button type="submit" class="btn primary cart-action">Подготовить заявку <span aria-hidden="true">→</span></button></form>`;
     const form = $('#checkout-form');
     form.addEventListener('input', event => {
       if (typeof event.target.setCustomValidity === 'function') event.target.setCustomValidity('');
+      showFieldError(event.target, '');
       readRetailForm(form);
     });
     form.addEventListener('change', () => {
       readRetailForm(form);
-      const pickup = form.elements.delivery.value === 'pickup';
+      const method = form.elements.delivery.value;
+      const pickup = method === 'pickup';
       $('#checkout-city-field').hidden = pickup;
       form.elements.city.required = !pickup;
       if (pickup) form.elements.city.setCustomValidity('');
-      $('#checkout-delivery-note').textContent = pickup ? 'Самовывоз: Новоселье, Институтская ул., 1, к. 2. Дождитесь подтверждения готовности.' : 'Доставка по тарифу СДЭК. Готовность, срок, стоимость и термоупаковку подтвердит менеджер.';
+      $('#checkout-delivery-note').textContent = store.shipping(session.summary().total, method);
     });
     form.addEventListener('submit', event => {
       event.preventDefault();
@@ -344,6 +374,7 @@
   $('#show-all').addEventListener('click', () => revealProducts(products.length));
   $('#wholesale-form').addEventListener('input', event => {
     if (typeof event.target.setCustomValidity === 'function') event.target.setCustomValidity('');
+    showFieldError(event.target, '');
     readBusinessForm();
     if (businessPrepared) {
       businessPrepared = false;

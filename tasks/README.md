@@ -90,3 +90,8 @@
 | SEO и точки входа в прямую продажу | [seo-direct-sales](seo-direct-sales/README.md) |
 | Начальный анализ Purpur и стратегия развития | [site-analysis](site-analysis/README.md) |
 | Оплата покупки на сайте | [website-online-payment](website-online-payment/README.md) |
+| Раскладка репозитория | [repository-layout](repository-layout/README.md) |
+| Исходники действующего сайта | [legacy-source-handoff](legacy-source-handoff/README.md) |
+| Простое управление текстами и карточками | [simple-site-cms](simple-site-cms/README.md) |
+| Мобильное приложение покупателя | [customer-mobile-app](customer-mobile-app/README.md) |
+| Управление отделом с телефона | [cto-phone-department](cto-phone-department/README.md) |

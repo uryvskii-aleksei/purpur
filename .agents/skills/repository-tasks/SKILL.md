@@ -14,7 +14,7 @@ Respect the task phase: current work retains manager-mediated payments. Future-s
 
 Read the owning record, current sources and direct user authorization. Distinguish observed defects from unverified reports, requested outcomes from proposals, role recommendations from actual assignments, and current workers from the configured roster. A past run or a role file is not proof of ongoing work.
 
-For backlog or team-status requests, open or link the local department board (`npm run department`) and the canonical task index in the final answer. When the user reports missing visibility, improve the existing task workflow and its view within the authorized scope, rather than only describing role files. Register a concrete requested change in its matching task before execution, update its result/assignment/next action before handing back, and preserve this evidence for future dialogs. Do not create a duplicate activity database.
+For backlog or team-status requests, link the [task index](../../../tasks/README.md) and, when `gh` is available, the GitHub issues of this repository. Do not start the local HTML board. A new CTO request in chat is registered in the matching `tasks/<id>/README.md` before the reply ends, so it is not left only in the conversation. Register a concrete requested change in its matching task before execution, update its result/assignment/next action before handing back, and preserve this evidence for future dialogs. Do not create a duplicate activity database.
 
 For status requests, reconcile the record with Git, actual worker state and available verification evidence. Report inaccessible systems and stale evidence. Do not invent work, completion or approvals to fill a backlog.
 

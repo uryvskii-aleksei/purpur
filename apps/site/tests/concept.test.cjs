@@ -26,7 +26,7 @@ test('Concept cart persists only allowed product IDs and bounded integer quantit
 test('Retail draft survives back navigation, validation failure and cart edits', () => {
   const session = createSession(products, { 1: 1 });
   assert.equal(session.beginCheckout(), true);
-  session.saveRetail({ name: 'Synthetic buyer', phone: '123', delivery: 'cdek', city: 'Synthetic city', email: 'sample@example.test', notes: 'Remember this note' });
+  session.saveRetail({ name: 'Synthetic buyer', phone: '123', delivery: 'region', city: 'Synthetic city', email: 'sample@example.test', notes: 'Remember this note' });
   assert.equal(session.prepareRetail().ok, false);
   assert.equal(session.stage(), 'checkout');
   session.backToCart();
@@ -45,20 +45,21 @@ test('Retail draft survives back navigation, validation failure and cart edits',
 
 test('Pickup excludes a remembered city from the prepared request and restores it for delivery', () => {
   const session = createSession(products, { 1: 1 });
-  session.saveRetail({ name: 'Synthetic buyer', phone: '79990000000', delivery: 'cdek', city: 'Synthetic city' });
+  session.saveRetail({ name: 'Synthetic buyer', phone: '79990000000', delivery: 'region', city: 'Synthetic city' });
   session.saveRetail({ delivery: 'pickup' });
   assert.equal(session.retailDraft().city, 'Synthetic city');
   assert.equal(session.retailPayload().city, '');
   assert.doesNotMatch(session.retailText(), /Synthetic city/);
+  assert.match(session.retailText(), /самовывоз/);
   assert.equal(session.prepareRetail().ok, true);
-  session.saveRetail({ delivery: 'cdek' });
+  session.saveRetail({ delivery: 'region' });
   assert.equal(session.retailPayload().city, 'Synthetic city');
   assert.match(session.retailText(), /Synthetic city/);
 });
 
 test('Prepared requests always derive from current cart and draft and never claim receipt', () => {
   const session = createSession(products, { 1: 1 });
-  session.saveRetail({ name: 'First buyer', phone: '79990000000' });
+  session.saveRetail({ name: 'First buyer', phone: '79990000000', delivery: 'pickup' });
   assert.equal(session.prepareRetail().ok, true);
   session.saveRetail({ name: 'Current buyer' });
   session.setQuantity(1, 3);
@@ -74,9 +75,10 @@ test('Prepared requests always derive from current cart and draft and never clai
 
 test('Retail asks only required contact and conditional city and rejects malformed phones', () => {
   assert.deepEqual(validateRetail({ name: 'Synthetic buyer', phone: '79990000000', delivery: 'pickup' }), {});
-  assert.ok(validateRetail({ name: ' ', phone: '123', delivery: 'cdek' }).name);
-  assert.ok(validateRetail({ name: 'Buyer', phone: '123', delivery: 'cdek' }).phone);
-  assert.ok(validateRetail({ name: 'Buyer', phone: '79990000000', delivery: 'cdek' }).city);
+  assert.ok(validateRetail({ name: ' ', phone: '123', delivery: 'region' }).name);
+  assert.ok(validateRetail({ name: 'Buyer', phone: '123', delivery: 'region' }).phone);
+  assert.ok(validateRetail({ name: 'Buyer', phone: '79990000000', delivery: 'region' }).city);
+  assert.ok(validateRetail({ name: 'Buyer', phone: '79990000000', delivery: 'spb' }).city);
   assert.ok(validateRetail({ name: 'Buyer', phone: '79990000000', delivery: 'pickup', email: 'bad-address' }).email);
   assert.ok(validateRetail({ name: 'Buyer', phone: '1234567890123456', delivery: 'pickup' }).phone);
   assert.ok(validateRetail({ name: 'Buyer', phone: 'a79990000000', delivery: 'pickup' }).phone);

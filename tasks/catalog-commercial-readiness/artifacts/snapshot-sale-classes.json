@@ -1,0 +1,3679 @@
+{
+  "auditedOn": "2026-10-28",
+  "snapshotDate": "2026-10-26",
+  "snapshotSource": "https://purpur.spb.ru/magazin",
+  "branch": "feature/site-business-concept",
+  "workspaceHead": "c40a70d55e39a46d7e9fd5c581c46f4206514762",
+  "sources": [
+    {
+      "path": "apps/site/public/products.js",
+      "blob": "31528d017a81cc3db4947bbc0208ce18de25d1c4",
+      "lastCommit": "80c043921f746fb1b87e4ceaf64dc2fe01b640ba"
+    },
+    {
+      "path": "apps/site/catalog-audit.json",
+      "blob": "5061fe00a6b011d16cfeecc1cc9a2d485e224fd6",
+      "lastCommit": "80c043921f746fb1b87e4ceaf64dc2fe01b640ba"
+    }
+  ],
+  "method": "Локальный разбор products.js через Node.js vm и сверка с catalog-audit.json. Сеть, хостинг и база не использовались.",
+  "limits": [
+    "Снимок 26.10.2026 не подтверждает остаток, действующую цену и актуальность состава.",
+    "Доступы к хостингу и базе не предоставлены. Зависимость live-landscape-inventory заблокирована.",
+    "Ограничение заказа у 29 позиций сохранено. Фасовка из текста состава и sourceWeight без единицы не принималась."
+  ],
+  "counts": {
+    "catalog": 221,
+    "liveSellable": 0,
+    "snapshotRequest": 192,
+    "snapshotRequestWithComposition": 189,
+    "snapshotRequestCompositionUnknown": [
+      137,
+      138,
+      139
+    ],
+    "restricted": 29,
+    "excludedFromSnapshot": 14,
+    "unknownFields": {
+      "stock": 221,
+      "priceActuality": 221,
+      "recordActuality": 221,
+      "shelfLife": 221,
+      "allergenStatement": 221,
+      "syncKey": 221,
+      "package": 29,
+      "composition": 12,
+      "nutrition": 12,
+      "storage": 9,
+      "packaging": 9
+    }
+  },
+  "excludedUnlisted": [
+    "https://purpur.spb.ru/magazin/product/tryufel-s-ekstraktom-yantarya-bez-sahara",
+    "https://purpur.spb.ru/magazin/product/tryufel-s-ekstraktom-yantarya-i-medom",
+    "https://purpur.spb.ru/magazin/product/nabor",
+    "https://purpur.spb.ru/magazin/product/test",
+    "https://purpur.spb.ru/magazin/product/iris-molochnoo-slivochnyj",
+    "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake-2",
+    "https://purpur.spb.ru/magazin/product/tryufeli-s-yagodami-i-praline-s-orehom-v-tyomnom-shokolade",
+    "https://purpur.spb.ru/magazin/product/tryufel-i-halva-mindal",
+    "https://purpur.spb.ru/magazin/product/trio-tryufeley-malina-konyak-fistashka",
+    "https://purpur.spb.ru/magazin/product/tryufelnoe-assorti-s-marcipanom",
+    "https://purpur.spb.ru/magazin/product/shokolad-s-chia",
+    "https://purpur.spb.ru/magazin/product/molochnyj-shokolad-s-klubnikoj-i-fistashkami",
+    "https://purpur.spb.ru/magazin/product/rubinovyj-shokolad",
+    "https://purpur.spb.ru/magazin/product/marcipan-klassicheskij-v-tubuse"
+  ],
+  "products": [
+    {
+      "id": 1,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-morskaya-stolica",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-petra-tvorene",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-nevskaya-simfoniya",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-s-mindalem-v-shokolade-v-tubuse",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1539,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-v-temnom-shokolade-v-tubuse",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1539,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://purpur.spb.ru/magazin/product/advent-kalendar-krasnyj",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 2035,
+      "snapshotWeight": "185 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://purpur.spb.ru/magazin/product/advent-kalendar-sinij",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 2035,
+      "snapshotWeight": "185 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://purpur.spb.ru/magazin/product/anichkov-most-molochno-orehovoe-praline-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1348,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://purpur.spb.ru/magazin/product/anichkov-most-molochno-orehovoe-praline-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6974,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://purpur.spb.ru/magazin/product/apelsinovie-tsukaty-v-shokolade-v-tubuse",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1568,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-great-moscow",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-dyhanie-vesny",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-kapriz",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-lyubimoj",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-russkoe-nasledie",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1320,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 24,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-v-stile-coco",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 25,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-vesennij-bal",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 26,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-vesennij-blyuz",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 27,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-zhenskie-tajny",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 28,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-shokoladnyh-konfet-zolotye-mechty",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 29,
+      "url": "https://purpur.spb.ru/magazin/product/assorti-zhostovo",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1110,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 31,
+      "url": "https://purpur.spb.ru/magazin/product/banany-v-shokolade-v-tubuse",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1539,
+      "snapshotWeight": "170 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 39,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-s-mindalem-v-temnom-shokolade-v-tubuse",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1539,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 40,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-v-shokolade-v-tubuse",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1539,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 42,
+      "url": "https://purpur.spb.ru/magazin/product/delovomu-muzhchine-portfel-chasy-konyak-karton",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1375,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 43,
+      "url": "https://purpur.spb.ru/magazin/product/ekaterina-ii-molochnyj-tryufel-s-malinoj-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1535,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 48,
+      "url": "https://purpur.spb.ru/magazin/product/gorkiy-tryufel-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1535,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 50,
+      "url": "https://purpur.spb.ru/magazin/product/gorod-belyh-nochej-tryufel-s-chernichnym-likerom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1348,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 51,
+      "url": "https://purpur.spb.ru/magazin/product/gorod-belyh-nochej-tryufel-s-chernichnym-likerom-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6974,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 57,
+      "url": "https://purpur.spb.ru/magazin/product/hozyain-v-dome-ruletka-gaechnyj-klyuch-ploskogubcy",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1265,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 64,
+      "url": "https://purpur.spb.ru/magazin/product/lakhta",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 65,
+      "url": "https://purpur.spb.ru/magazin/product/lyubimomu-zashchitniku-pistolet-limonka-blyaha",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1375,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 99,
+      "url": "https://purpur.spb.ru/magazin/product/mindalnaya-halva-s-tryufelnym-kremom-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1370,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 101,
+      "url": "https://purpur.spb.ru/magazin/product/mini-gorkiy-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 102,
+      "url": "https://purpur.spb.ru/magazin/product/mini-molochniy-shokolad-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 103,
+      "url": "https://purpur.spb.ru/magazin/product/mini-temniy-chocolat",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6190,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 111,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-tryufel-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1535,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 113,
+      "url": "https://purpur.spb.ru/magazin/product/morskaya-stolica-funduchno-arahisovaya-halva-s-tryufelnym-kremom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1348,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 114,
+      "url": "https://purpur.spb.ru/magazin/product/morskaya-stolica-funduchno-arahisovaya-halva-s-tryufelnym-kremom-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6974,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 118,
+      "url": "https://purpur.spb.ru/magazin/product/na-nevskom-molochno-kofejnyj-tryufel-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1348,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 119,
+      "url": "https://purpur.spb.ru/magazin/product/na-nevskom-molochno-kofejnyj-tryufel-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6974,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 120,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-hovorod-u-elki",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 121,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-kraski-peterburga",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 122,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-ogni-peterburga",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 123,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-peterburgskie-meteli",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 124,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-volshebstvo-u-kamina",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 125,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-zagadki-peterburga",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 126,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-shokoladnyh-konfet-zamok-snezhinok",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 127,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-apelsinovymi-cukatami-i-vishnej-bez-sahara",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1595,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ],
+      "unresolvedSourceWeight": "120"
+    },
+    {
+      "id": 128,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-keshyu-i-kofe-bez-sahara",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1595,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ],
+      "unresolvedSourceWeight": "120"
+    },
+    {
+      "id": 129,
+      "url": "https://purpur.spb.ru/magazin/product/nabor-tryufelej-s-zhivicej-yantarya-bez-sahara-i-zhivicej-yantarya-i-medom",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1595,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ],
+      "unresolvedSourceWeight": "120"
+    },
+    {
+      "id": 130,
+      "url": "https://purpur.spb.ru/magazin/product/nastoyashchemu-muzhchine-nabor-instrumentov",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1265,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 132,
+      "url": "https://purpur.spb.ru/magazin/product/petr-i-tryufel-s-percem-i-solyu-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1535,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 134,
+      "url": "https://purpur.spb.ru/magazin/product/petra-tvorene-marcipanovaya-pomadka-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1348,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 135,
+      "url": "https://purpur.spb.ru/magazin/product/petra-tvorene-marcipanovaya-pomadka-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6974,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 137,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-korobka-gorodskaya-kollekciya",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1550,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "composition",
+        "nutrition"
+      ]
+    },
+    {
+      "id": 138,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-upakovka-russkaya-rospis",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1550,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "composition",
+        "nutrition"
+      ]
+    },
+    {
+      "id": 139,
+      "url": "https://purpur.spb.ru/magazin/product/podarochnaya-upakovka-velikie-mastera-rossii",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1550,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "composition",
+        "nutrition"
+      ]
+    },
+    {
+      "id": 141,
+      "url": "https://purpur.spb.ru/magazin/product/praline-s-kokosom-i-fundukom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1495,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 142,
+      "url": "https://purpur.spb.ru/magazin/product/praline-s-kokosom-i-fundukom-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7722,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 143,
+      "url": "https://purpur.spb.ru/magazin/product/real-man",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1419,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 144,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-grad-petrov",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 145,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-moskva-lyubov-moya",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1210,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 146,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-simvoly-rossii",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1110,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 147,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnye-konfety-velikie-monarhi-rossii",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1110,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 159,
+      "url": "https://purpur.spb.ru/magazin/product/truffle-pobeditel",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1419,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package",
+        "composition",
+        "nutrition",
+        "storage",
+        "packaging"
+      ]
+    },
+    {
+      "id": 164,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij-v-podarochnoj-upakovke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 166,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara-3",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 170,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake-3",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1495,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 173,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami-v-podarochnoj-upakovke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 174,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1495,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 175,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkoj-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7722,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 177,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara-3",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 179,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-v-temnom-shokolade",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1370,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 181,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara-3",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1485,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 186,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-v-podarochnoj-upakovke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1408,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 187,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1495,
+      "snapshotWeight": "150 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 198,
+      "url": "https://purpur.spb.ru/magazin/product/velikij-pushkin-tryufel-klassicheskij-v-temnom-shokolade-95",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1200,
+      "snapshotWeight": "95 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-apelsin-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-klyukvoj-v-yagodnom-likere",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://purpur.spb.ru/magazin/product/yekaterina-ii-molochnyy-tryufel-v-temnom-shokolade-s-malinoy-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6952,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-s-mindalem-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5290,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://purpur.spb.ru/magazin/product/abrikos-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://purpur.spb.ru/magazin/product/arahisovoe-praline-s-vishnej-i-merengami-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5231,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 30,
+      "url": "https://purpur.spb.ru/magazin/product/banan-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5090,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 32,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-apelsinom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 208,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 33,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-apelsinom-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 242,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 34,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-bananom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 208,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 35,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-ananas-s-bananom-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 242,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 36,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-grusha-s-apelsinom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 208,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 37,
+      "url": "https://purpur.spb.ru/magazin/product/batonchik-grusha-s-apelsinom-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 242,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 38,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-s-mindalem-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5790,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 41,
+      "url": "https://purpur.spb.ru/magazin/product/chernosliv-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5290,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 44,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnoe-praline-s-kukuruznoj-kroshkoj-v-molochnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5231,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 45,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnoe-praline-s-zernami-kofe-v-molochnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5231,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 46,
+      "url": "https://purpur.spb.ru/magazin/product/funduchnyj-krem-s-kukuruznoj-kroshkoj-v-molochnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6500,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 47,
+      "url": "https://purpur.spb.ru/magazin/product/gorkij-tryufel-s-konyakom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 49,
+      "url": "https://purpur.spb.ru/magazin/product/gorkiy-tryufel-v-temnom-shokolade-2",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6226,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 52,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-gorkij-tryufel-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 53,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-molochnyj-tryufel-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 54,
+      "url": "https://purpur.spb.ru/magazin/product/grad-petrov-tryufel-s-konyakom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 55,
+      "url": "https://purpur.spb.ru/magazin/product/gzhel-tryufel-s-cukatami-kryzhovnika-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7445,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 56,
+      "url": "https://purpur.spb.ru/magazin/product/hohloma-molochno-orehovoe-praline-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7445,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 58,
+      "url": "https://purpur.spb.ru/magazin/product/koshka-pishka-shokoladniyiris-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4609,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 59,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-arahis-s-solenoj-karamelyu",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 941,
+      "snapshotWeight": "220 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 60,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-fundukom-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1018,
+      "snapshotWeight": "220 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 61,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-fundukom78",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 941,
+      "snapshotWeight": "220 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 62,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-molochnyj-shokolad-s-keshyu",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1018,
+      "snapshotWeight": "220 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 63,
+      "url": "https://purpur.spb.ru/magazin/product/krem-desert-temnyj-shokolad-s-mindalem",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 941,
+      "snapshotWeight": "220 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 66,
+      "url": "https://purpur.spb.ru/magazin/product/mango-marakuyya-marmelad-v-shokolade-ves",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4609,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 67,
+      "url": "https://purpur.spb.ru/magazin/product/mango-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5280,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 68,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-klassicheskij",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 149,
+      "snapshotWeight": "45 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 69,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-ananasom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 248,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 70,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-ananasom-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 274,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 71,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-apelsinom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 248,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 72,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-apelsinom-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 274,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 73,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-fistashkoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 209,
+      "snapshotWeight": "45 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 74,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-klyukvoj",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 248,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 75,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-klyukvoj-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 274,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 76,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-marakujej-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 209,
+      "snapshotWeight": "45 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 77,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-s-sushenymi-fruktami-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 209,
+      "snapshotWeight": "45 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 78,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 209,
+      "snapshotWeight": "45 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 79,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-vanilnyj-mindal",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 198,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 80,
+      "url": "https://purpur.spb.ru/magazin/product/marcipan-vanilnyj-mindal-v-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 274,
+      "snapshotWeight": "50 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 81,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-ananas-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 82,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-ananas-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 83,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-apelsin-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 84,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-chernaya-smorodina-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 85,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-chernaya-smorodina-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 86,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-grusha-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 87,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-grusha-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 88,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-klyukva-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 89,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-klyukva-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 90,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-krasnaya-smorodina-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 91,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-krasnaya-smorodina-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 92,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-limon-imbir-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 93,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-limon-imbir-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 94,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-malina-v-temnom-shokolade-ves",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4609,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 95,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-mango-marakujya-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 96,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-mango-marakujya-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 97,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-zelenoe-yabloko-v-kokosovoj-struzhke",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 769,
+      "snapshotWeight": "75 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 98,
+      "url": "https://purpur.spb.ru/magazin/product/marmelad-zelenoe-yabloko-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 967,
+      "snapshotWeight": "110 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 100,
+      "url": "https://purpur.spb.ru/magazin/product/mindalnoe-praline-v-molochnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5231,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 104,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyj-tryufel-s-kokosom-i-mindalem",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 105,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyj-tryufel-s-vafelnoj-kroshkoj-i-fundukom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6770,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 106,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 495,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 107,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-fundukom",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 515,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 108,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-malinoy-i-myatoy",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 525,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 109,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mango",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 540,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 110,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-shokolad-s-mindalem",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 515,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 112,
+      "url": "https://purpur.spb.ru/magazin/product/molochnyy-tryufel-v-temnom-shokolade-2",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6226,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 115,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-praline-s-greckim-orehom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 116,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-tryufel-s-klyukvoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 117,
+      "url": "https://purpur.spb.ru/magazin/product/moskva-lyubov-moya-tryufel-s-vodkoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 131,
+      "url": "https://purpur.spb.ru/magazin/product/paleh-tryufel-klassicheskij-s-vodkoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7445,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 133,
+      "url": "https://purpur.spb.ru/magazin/product/petr-i-tryufeli-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6226,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 136,
+      "url": "https://purpur.spb.ru/magazin/product/pisateli-rossii-praline-s-greckim-orehom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6300,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 140,
+      "url": "https://purpur.spb.ru/magazin/product/poety-rossii-tryufel-s-klyukvoj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6300,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 148,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnyj-batonchik-bez-sahara-dubajskij-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 215,
+      "snapshotWeight": "35 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 149,
+      "url": "https://purpur.spb.ru/magazin/product/shokoladnyj-batonchik-dubajskij-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 215,
+      "snapshotWeight": "35 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 150,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-molochnyj-tryufel-s-malinoj-i-marmeladnymi-kaplyami-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 151,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-praline-s-kedrovym-orehom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 152,
+      "url": "https://purpur.spb.ru/magazin/product/simvoly-rossii-tryufel-s-kryzhovnikom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 153,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 525,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 154,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-apelsinovymi-tsukatami",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 545,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 155,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-fundukom",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 545,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 156,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mango",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 560,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 157,
+      "url": "https://purpur.spb.ru/magazin/product/temnyy-shokolad-s-mindalem",
+      "saleClass": "restricted",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 545,
+      "snapshotWeight": null,
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey",
+        "package"
+      ]
+    },
+    {
+      "id": 158,
+      "url": "https://purpur.spb.ru/magazin/product/truffle-kedr-bez-sahara-ves",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7970,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 160,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-mandarinovyj",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1170,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 161,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-mandarinovyj-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 162,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1170,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 163,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-rozhdestvenskij-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 165,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7753,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 167,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-bez-sahara-4",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 168,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-apelsinom-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 169,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-chernoslivom-v-konyake",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 171,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1170,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 172,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-fistashkami-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 176,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7753,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 178,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-keshyu-bez-sahara-4",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 180,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7753,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 182,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kofe-bez-sahara-4",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 183,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-kolumbijskim-kofe",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 184,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 1170,
+      "snapshotWeight": "130 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 185,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-malinoj-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7447,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 188,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishnej-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 189,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishney-bez-sahara-v-temnom-chocolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7753,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 190,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-vishney-v-temnom-chocolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7689,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 191,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-zhivicej-yantarya-bez-sahara",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 192,
+      "url": "https://purpur.spb.ru/magazin/product/tryufel-s-zhivicej-yantarya-i-medom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6589,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 193,
+      "url": "https://purpur.spb.ru/magazin/product/tsukaty-apelsinovaya-korochka-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6270,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 194,
+      "url": "https://purpur.spb.ru/magazin/product/tsukaty-limonnaya-korochka-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6270,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 195,
+      "url": "https://purpur.spb.ru/magazin/product/velikie-monarhi-rossii-ekaterina-ii-molochnyj-tryufel-s-malinoj-i-marmeladnymi-kaplyami-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 196,
+      "url": "https://purpur.spb.ru/magazin/product/velikie-monarhi-rossii-petr-i-gorkij-tryufel-s-morskoj-solyu-i-kajenskim-percem-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6848,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 197,
+      "url": "https://purpur.spb.ru/magazin/product/velikij-pushkin-tryufel-klassicheskij-v-temnom-shokolade-1",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6300,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 199,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoj-molochnyj-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4609,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 200,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4896,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 201,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-fundukom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5200,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 202,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-izyumom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4890,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 203,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-keshyu",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5100,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 204,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-malinoy",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6220,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 205,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-mango",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5850,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 206,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-mindalem",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5100,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 207,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-pekanom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5550,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 208,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-molochnyy-shokolad-s-sushenoy-klyukvoy",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 4950,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 209,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 210,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-fundukom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5615,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 211,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-izyumom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5315,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 212,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-keshyu",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5515,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 213,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-malinoy",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6740,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 214,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-mango",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6380,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 215,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-mindalem",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5515,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 216,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-pekanom",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 6000,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 217,
+      "url": "https://purpur.spb.ru/magazin/product/vesovoy-temnyy-shokolad-s-sushenoy-klyukvoy",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 5380,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 218,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-s-yagodami-chernoj-smorodiny-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 3990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 219,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-s-yagodami-klykvi-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 3990,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 220,
+      "url": "https://purpur.spb.ru/magazin/product/zefir-vanilnyj-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 3630,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    },
+    {
+      "id": 221,
+      "url": "https://purpur.spb.ru/magazin/product/zhostovo-molochno-slivochnyj-tryufel-v-temnom-shokolade",
+      "saleClass": "snapshot-request",
+      "liveSale": "unconfirmed",
+      "snapshotPrice": 7445,
+      "snapshotWeight": "1000 г",
+      "unknown": [
+        "stock",
+        "priceActuality",
+        "recordActuality",
+        "shelfLife",
+        "allergenStatement",
+        "syncKey"
+      ]
+    }
+  ]
+}
