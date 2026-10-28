@@ -1,50 +1,40 @@
 # Research and Spike
 
-## Local and GitHub research
+[dev-cycle](../../dev-cycle/SKILL.md) selects the requested route. Use this reference for an authorized investigation or a bounded technical question inside authorized work. A task link or discussion alone supplies context. Research and implementation need separate user requests. Preserve an implementation request already given by the user and return to it after an in-scope Spike without asking for permission again.
 
-This is the default route for Purpur. Read the request, repository documentation and existing decisions. Bound the question, evidence and stopping condition. Compare real alternatives when the question needs alternatives. Distinguish observed facts, proposals and unverified assumptions. Missing access is not evidence that an option fails.
+## Scope and records
 
-For a substantial research launch, keep one canonical record in `docs/techprojects/<slug>/<slug>.md` with the design, source links, conclusions, open checks and next action. Use temporary directories for experiments. Request independent artifact review when available and report its absence when unavailable. Present a concrete recommendation for human review. Record the reviewed revision and direct human decision source. After approval, save a cohesive implementation decomposition and handoff in the record, then finish the research chat. A separate implementation request starts product work. A standalone bounded Spike may finish with its answer and evidence in chat.
+Read the request, owning [repository task](../../repository-tasks/SKILL.md), repository documentation, accepted designs and relevant dependencies. Reuse existing research and evidence. Record the question, scope, direct authorization and its limits, acceptance, useful evidence and stopping condition in `tasks/<id>/README.md`. Substantial department research belongs in a task, not an external tracker or a second plan. A small standalone clarification may finish with its answer and evidence in chat.
 
-No TFS item, external write, branch, empty commit or PR is required merely to research. Repository changes and publication still follow the task's authorization. The following detailed route applies only to explicitly selected TFS work.
+Bound autonomous work to a concrete question and relevant sources or experiments. Honor the supplied research limit. Do not expand scope or prolong an inconclusive investigation indefinitely. Batch nonblocking questions for the decision handoff. Pause dependent work only for a consequential unresolved choice or unavailable prerequisite, and continue independent work.
 
-## TFS research route
-
-Use for an authorized research launch or technical uncertainty inside an authorized task. A bare WI link or discussion only reads context. [dev-cycle](../../dev-cycle/SKILL.md) selects the route. [tfs-work-items](../../tfs-work-items/SKILL.md) owns item creation, links, writing and states.
-
-## Scope and evidence
-
-Read the source Feature or PBI, its requirements, existing decisions, relevant repositories and sibling work. Reuse an existing research PBI and matching Spike Tasks before creating more. For a source Feature, attach and verify the research PBI as its Child through the [PBI hierarchy procedure](../../tfs-work-items/references/links-and-writing.md#pbi-hierarchy-under-a-feature). Feature fields, states and unrelated links remain read-only. Reference the source item from the research PBI description.
-
-Make the question, mandatory constraints, useful evidence and stopping condition explicit. Honor a supplied research limit. Bound autonomous Spike work to a concrete technical question and relevant sources or experiments. Do not expand scope or prolong an inconclusive investigation indefinitely. Batch nonblocking questions for the planned design review. Pause dependent work earlier only for a consequential missing decision, scope change or unavailable prerequisite. Silence is not approval.
-
-| Deliverable | Required result |
+| Deliverable | Result |
 | --- | --- |
-| PBI `Исследование: …` | At least two real options compared against the same constraints, evidence, recommendation and consequences. Rejected options may be real alternatives with demonstrated limitations. Never invent an option to fill a template. |
-| Task `Spike: …` | One concrete question, reproducible check or authoritative source, answer, limits and next action. Compare options only when the question needs it. |
+| Research | Real alternatives compared against the same constraints when alternatives are needed, evidence, recommendation and consequences. Do not invent an option to fill a template. |
+| Bounded Spike | One concrete question, reproducible check or authoritative source, answer, limits and next action. Compare alternatives only when the question needs it. |
 
-Keep Spike results concise: question, findings or evaluation, and conclusion with rationale and unverified checks. Use compact source links and refer to an existing technical design instead of repeating its behavior. Omit investigation transcripts and implementation checklists.
+Create separate dependent tasks only when scope, responsibility, evidence or stopping conditions justify them. Keep focused checks in the existing task otherwise. If an option changes, update its conclusions and the affected design while preserving evidence for rejected options.
 
-When options need different sources, experiments or stopping criteria, give each option a focused Spike and compare their results in the research PBI. Reuse existing items and honor the user's requested grouping. Keep each Spike's scope, title and conclusion aligned with the actual alternative. When consolidating Spikes, fold supporting checks into the relevant option. Do not create separate Spikes for a comparison that needs no independent checks. When an option or the chosen approach changes, update the affected Spike conclusions and the canonical design together, preserving evidence for rejected options.
+## Evidence and experiments
 
-Separate observed facts, proposals and unverified assumptions. A disproved hypothesis is a useful result when supported by evidence. Missing access or data is an incomplete check, not proof that an approach fails. At the stopping condition, preserve what is known, the exact gap and a proposed next decision. Do not report unresolved research as ready for implementation.
+Separate observed facts, proposals and unverified assumptions. A disproved hypothesis is useful when supported by evidence. Missing access or data is an incomplete check, not proof that an approach fails. At the stopping condition, preserve what is known, the exact gap and a proposed next decision. Do not report unresolved research as ready for implementation.
 
-Use focused assignments under [parallel work](../../dev-cycle/references/parallel-work.md), keeping analysis read-only and delegating bounded experimental code when useful. Keep temporary logs and prototypes outside the repository under the artifact rules. Preserve the evidence needed to understand and reproduce conclusions in the Spike result. A temporary file path alone is not durable evidence. Repository changes follow the normal workspace, checks and PR rules and do not turn a prototype into approved product code.
+Keep findings concise: question, evidence or evaluation, conclusion, rationale, unverified checks and next action. Link authoritative sources and include enough information to reproduce important checks. A temporary file path alone is not durable evidence. Record decisions and verification in the task. Useful sanitized durable files may live in `tasks/<id>/artifacts/`. Keep raw logs, caches, prototypes, temporary screenshots and review bundles outside tracked sources. Do not create agent activity or performance logs.
 
-A standalone Spike ends with its answer, evidence and proposed next action. An in-scope Spike embedded in implementation returns to the authorized task unless it changes an approved decision materially. Neither requires a new research PBI, full technical design or separate human review just to answer one technical question. The design-review package below applies to a Feature or PBI research launch.
+Use bounded assignments only under [parallel work](../../dev-cycle/references/parallel-work.md). Repository changes follow workspace and verification rules. A prototype does not become approved product code merely because it works. No empty commit, PR or publication is required to record research.
 
-## Prepare the review package
+## Recommendation and review
 
-Maintain the canonical [technical design](technical-design.md) in the research PBI description. Link Spike results instead of copying their full investigations. Cover affected repositories, boundaries and shared contracts, important scenarios, failures, compatibility, verification and material risks as applicable.
+When the result establishes lasting behavior or shared contracts, maintain one [technical design](technical-design.md) in `docs/techprojects/<slug>/<slug>.md` and link it from the task. Keep the plan, research evidence, authorization, decisions and continuation state in the task. Link detailed evidence instead of copying investigations into the design.
 
-Keep product implementation and its decomposition unstarted. Research PBIs and Spike Tasks may be created as needed for the investigation. Resolve technical issues the agent can verify and run independent substantive review of the technical design through the [reviewer](../../../roles/reviewer.md) before asking the human to review it. Agent review cannot replace human design approval.
+Cover affected boundaries and contracts, important scenarios, failures, compatibility, verification and material risks as applicable. Obtain independent artifact review for a substantive design when available and report missing independence honestly. Resolve technical questions the agent can verify before presenting a decision. Agent review does not provide human approval.
 
-The normal research launch has one planned human review of the technical design. Individual Spike results remain available for questions without a mandatory separate approval for each one. Present a concrete recommendation and remaining decisions. If the human requests changes, update the design and maintain its `Решения` section under [technical designs](technical-design.md#content), then return it for review.
+Present a concrete recommendation and only material unresolved choices to the human. Record the actual answer, source, scope, conditions and reviewed document revision or saved snapshot in the task. Reuse settled decisions and direct authorization. A bounded Spike or routine decomposition within accepted boundaries needs no separate approval stage. If a change exceeds those boundaries, prepare the concrete amendment and its consequences before asking about that changed part. Silence is not approval.
 
 ## Finish and transfer
 
-Record explicit human approval of the reviewed technical design. After approval to proceed, prepare [decomposition](../../tfs-work-items/references/decomposition.md) into one or more implementation PBIs distinct from the research PBI, each with its own child Tasks. Follow the business-value and Task-granularity rules there. Keep the design and conclusions in the research PBI and save the durable [handoff](technical-design.md#human-review-and-handoff) with links to those implementation PBIs, dependencies, outcomes and checks. Decomposition that follows the approved design needs no additional human approval. If it exposes a material design change, prepare that amendment for human review before dependent decomposition. Then end the research chat. Do not start product implementation, create a new chat or message another chat merely because the design was approved. A separate user request in another chat starts implementation against an implementation PBI or Task.
+Record the answer, checks, remaining limits and next action in the task. For a research launch, prepare a cohesive implementation handoff with the accepted design, dependencies, proposed outcomes and verification. Use the single task [plan](plan-format.md) and create linked implementation tasks only when needed. Do not duplicate the plan in a PR or the technical design.
 
-A no-go decision may complete the research result without implementation decomposition or product implementation. Report incomplete checks and unapproved decisions accurately. WI closure still needs explicit authorization and follows [states](../../tfs-work-items/references/states.md).
+Finish the requested research after delivering its result and handoff. Design approval alone does not start implementation, open a new chat or authorize messaging another chat. A separate implementation request starts that work, and an existing direct implementation request remains valid. An in-scope Spike inside implementation returns to the already authorized task unless a material unresolved decision prevents dependent work.
 
-Prepare a concise announcement with the result, reason, WI link and follow-up work. Send it to a team channel only with explicit authorization. Otherwise report that the announcement is prepared but not sent. A PR notification or a reply in the current chat does not establish that the team was notified.
+A no-go recommendation may finish the research result without implementation. Report unverified checks and unresolved decisions accurately. Task closure, commit, push, PR creation and external notifications remain within direct user authorization. Report the result in the current chat without inventing a requirement to send an announcement.

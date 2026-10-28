@@ -8,10 +8,17 @@ description: >-
 
 Use the [devops contract](../../roles/devops.md). Read the environment and scope before choosing tools.
 
-1. Identify service/owner, environment, source version, current deployment and configuration/secret mechanisms. Do not infer a production access right or expose secrets.
-2. For deployment, define provenance, prerequisites, health checks, rollout/rollback and data compatibility. Code rollback may not reverse a migration.
-3. For recovery, identify backup scope/retention/access, isolated restore procedure and actual restore evidence. Obtain missing business recovery objectives instead of inventing tolerated data loss or downtime.
-4. For incidents, separate observation, hypothesis and confirmed cause. Start with scoped read-only evidence, preserve useful redacted diagnostics and propose a small reversible mitigation. Production action follows actual authorization.
-5. Prepare assigned CI/config/runbooks and verify local syntax/behavior. Coordinator executes authorized live operations and checks the same version. Report inaccessible environment checks and untested recovery plainly.
+1. Inventory the actual service/owner, [environment scope](../../../docs/techprojects/site-development/site-development.md), running version, deployment path and configuration/secret mechanisms. Distinguish the deployed artifact from a source checkout. Record the source/build identity and material inputs needed to reproduce or promote that artifact.
+2. Compare the relevant environment properties: runtime/dependency versions, schema, configuration shape, identities, data and external endpoints. Explain intentional differences. Check outbound jobs/callbacks as well as inbound access when verifying isolation. Use synthetic data and actual secret mechanisms. Environment names alone do not prove separation.
+3. For rollout, identify prerequisites and health signals for the affected behavior and dependencies, an observation window and stop/rollback conditions. Take thresholds from actual service objectives or make their absence explicit. A syntax check or process health response is only one layer of verification. Do not require a new deployment strategy or environment when the existing one suffices.
+4. Establish application/data compatibility before treating rollback as executable. Check whether the previous application can read data written by the new version and whether a migration has irreversible effects. Describe when rollback, forward repair or external reconciliation is appropriate. Coordinate these contracts with architect/integration engineer.
+5. For recovery, identify backup scope, retention, protection and restore dependencies, including attachments and required configuration. Restore into an isolated permitted target with outbound side effects contained. Verify the restored service can use the data and important relationships, not merely that restore exited successfully. Report measured recovery coverage and missing business recovery objectives without inventing tolerated loss/downtime.
+6. For incidents, start from the affected behavior and time window. Compare recent artifact/configuration/dependency changes, separate observations from hypotheses and preserve redacted diagnostics. Prefer a small reversible mitigation with a way to detect improvement. Do not replay writes or restore data as a diagnostic shortcut.
+
+Prepare only the applicable configuration/runbook and local checks. Coordinator executes authorized environment operations. Record what was actually exercised and what is still a proposed procedure. Keep credentials out of commands/logs that become repository artifacts.
 
 Route business impact to PO/CTO, shared boundaries to architect and adapters to integration engineer. Operational readiness, QA, business acceptance and release authorization differ. A general operational task does not authorize billing, public access, destructive cleanup or live restores.
+
+For corporate Figma or Rocket.Chat access, apply [corporate MCP selection](../integration-design/references/corporate-mcp.md). Documented capability is not a verified connection, and curated tool sets can include writes.
+
+For this project's macOS click failure or any proposed return to native desktop automation, read [desktop input isolation](references/desktop-input-incident.md). Preserve its active incident restriction across handoffs.

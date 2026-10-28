@@ -8,6 +8,8 @@ description: >-
 
 The user is CTO. Select specialists by the outcome, not by running every role. [Role contracts](../../roles/) own responsibilities. [Delegation policy](../dev-cycle/references/parallel-work.md) owns runtime mechanics. This skill owns cross-role routing and decision handoff.
 
+For role-based assignments, apply the shared [professional standard](references/professional-standard.md). Role-specific judgment belongs in the role contract and concrete procedures in its owning skill. Increase depth where evidence or consequences require it, without adding a mandatory department-wide ceremony.
+
 ## Intake and routing
 
 Read the request, existing decisions and actual systems. State outcome, scope, acceptance and authorization. Reuse assigned business owners. Route only affected responsibilities:
@@ -49,6 +51,8 @@ Workers never approve their own business deliverable, delegate further, mutate G
 
 ## Handoff and records
 
-Use [handoff contract](references/handoffs.md). Keep one owning source per requirement, content fact, technical decision or metric. Local plans stay in chat, PR plans in the PR, enduring designs in the canonical research record. Save a durable cross-role contract under `docs/` only when needed. Do not create routine per-agent logs or repository customer records.
+For requests to continue work, show the backlog or explain team activity, reconcile and update the canonical task records and provide a direct view/link to them. Use the existing repository task workflow to fix a reported coordination or visibility gap within the user's authorized scope. Do not merely promise future harness improvements. An assigned role is not a running worker.
+
+Use [handoff contract](references/handoffs.md). Keep one owning source per requirement, content fact, technical decision or metric. Use [repository-tasks](../repository-tasks/SKILL.md) for canonical task plans, status, actual assignments, decisions, verification and next actions in Git. PRs reference the task plan. Enduring designs stay in the canonical research record. Useful sanitized artifacts belong beside their task. Save a durable cross-role contract under `docs/` only when needed. Do not create routine per-agent logs or repository customer records.
 
 Use inherited model/reasoning, at most three workers plus coordinator, no nested delegation. If delegation is unavailable, appropriate roles may be executed sequentially. Same-agent role switching does not create independent QA/review. Report missing required independence instead of relabelling it.

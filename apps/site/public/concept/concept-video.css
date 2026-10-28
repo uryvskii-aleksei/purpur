@@ -1,0 +1,62 @@
+/* Локальная подложка отделяет текст, сохраняя исходные цвета видео вокруг него. */
+.hero.gift-hero.video-hero {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: max(48px, calc((100vw - 1240px) / 2));
+  background: var(--paper);
+}
+.video-hero::before,
+.video-hero::after { display: none; }
+.video-hero .hero-copy {
+  max-width: 560px;
+  padding: 32px 36px;
+  background: rgba(255,253,251,.96);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 14px rgba(255,253,251,.96);
+}
+.gift-hero.video-hero h1 {
+  color: var(--purple-deep);
+  font-size: clamp(42px, 4.4vw, 64px);
+}
+.gift-hero.video-hero h1 em,
+.gift-hero.video-hero .eyebrow { color: var(--purple-deep); }
+.gift-hero.video-hero .hero-description { color: var(--ink); }
+.gift-hero.video-hero .hero-buttons .primary {
+  color: white;
+  background: var(--purple);
+  border-color: var(--purple);
+  box-shadow: none;
+}
+.gift-hero.video-hero .hero-buttons .primary:hover {
+  background: var(--purple-deep);
+  border-color: var(--purple-deep);
+}
+.gift-hero.video-hero .hero-buttons .text-link { color: var(--purple); }
+.hero-video-toggle {
+  color: var(--purple-deep);
+  background: #fffdfbef;
+  border-color: #76267f66;
+  backdrop-filter: none;
+}
+.hero-video-toggle:hover { background: #eee3f0; }
+.video-hero a:focus-visible,
+.hero-video-toggle:focus-visible { outline-color: var(--purple); }
+@media (max-width: 980px) {
+  .hero.gift-hero.video-hero { padding-inline: 32px; }
+}
+@media (max-width: 720px) {
+  .hero.gift-hero.video-hero { min-height: 0; padding: 220px 0 0; display: block; }
+  .video-hero .hero-video { height: 220px; object-position: center; }
+  .video-hero .hero-copy {
+    max-width: none;
+    padding: 28px 20px 32px;
+    background: var(--paper);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .hero-video-toggle { top: 160px; bottom: auto; right: 20px; }
+  .gift-hero.video-hero h1 { font-size: 40px; letter-spacing: -1.3px; }
+}

@@ -1,16 +1,12 @@
 # Technical designs
 
-## Storage selection
+## Storage
 
-For Purpur local/GitHub work, the canonical design is `docs/techprojects/<slug>/<slug>.md`. Keep one source, source URLs, evidence, the reviewed revision and human decision, approved scope, decomposition and continuation state there. Use the content and validation guidance below. A TFS PBI is required only for an explicitly selected TFS assignment. In that route, use the PBI procedures below instead of duplicating the record locally.
+The canonical design is `docs/techprojects/<slug>/<slug>.md`. Keep lasting behavior, boundaries, contracts and their reasons there. The owning [repository task](../../repository-tasks/SKILL.md) links the design and owns the plan, authorization, actual human decision source and reviewed revision, verification, dependencies and next action. Link evidence at its owner instead of duplicating it.
 
-For local handoff, use the document path and Git revision (or an identified saved snapshot before the first commit), and the direct user decision source in place of a PBI ID/revision. No issue or work-item closure is implicit. An approval record describes a real human decision and never creates one.
+Identify the document path and Git revision, or an identified saved snapshot before the first commit. A decision record describes a real human decision and never creates one. Task closure, merge and publication are separately scoped actions.
 
-## TFS storage
-
-The canonical technical design lives in `System.Description` of the scoped PBI `Исследование: …`, including designs shared by several repositories. Link the source Feature or PBI, Spike results and implementation items. Maintain it through [TFS writing](../../tfs-work-items/references/links-and-writing.md). Do not duplicate the canonical design in each repository.
-
-Repository-owned API and component documentation stays with its code and links the common design where needed. Preserve existing imports in `docs/techprojects/<slug>/<slug>.md` and their optional `assets/` until a migration is requested. An explicit local-document request still uses that location. Preserve an imported kebab-case wiki slug and source URL. On layout-only moves preserve names and content and repair links.
+Repository-owned API and component documentation stays with its code and links the common design where needed. Preserve existing imports in `docs/techprojects/<slug>/<slug>.md` and their optional `assets/` until a migration is requested. Preserve an imported kebab-case slug and source URL. On layout-only moves preserve names and content and repair links.
 
 ## Content
 
@@ -23,7 +19,7 @@ Resolve consequential choices through [clarification](clarify-requirements.md) a
 - `Контракты`: changed methods and data formats, with minimal examples.
 - `Решения`: concise answers to questions resolved with the user during design review, with the reason for each choice.
 
-Number headings under the repository conventions. Keep every section brief and add subsections only when needed. Define recurring domain terms once and use them without repeating their qualifications. Link detailed research evidence in Spike results. Leave checkout state, tool transcripts, review chronology, announcements and implementation checklists out of the design body. Describe implementation internals only when needed to assess a material decision or contract. Implementation progress belongs in the PR plan. Research continuation state belongs in the PBI.
+Number headings under the repository conventions. Keep every section brief and add subsections only when needed. Define recurring domain terms once and use them without repeating their qualifications. Link detailed research evidence from its task or sanitized `tasks/<id>/artifacts/`. Leave checkout state, tool transcripts, review chronology, announcements and implementation checklists out of the design body. Describe implementation internals only when needed to assess a material decision or contract. Implementation progress, research continuation state and actual decision provenance belong in the task.
 
 - Start each scenario with its trigger and follow causal order through controls, actors, calls and results.
 - Verify methods, routes, ownership and side effects against implementation or authoritative documentation. Label proposals and unverified claims.
@@ -36,14 +32,14 @@ Keep each detail in one owning section and reference it elsewhere. In `Реше�
 
 ## Validate and deliver
 
-Walk through the important scenarios and verify prerequisites, identifiers, ownership, recovery, links and examples. Substantive designs need an independent review, editorial changes need document checks. Report actual local and publication status and verification gaps.
+Walk through the important scenarios and verify prerequisites, identifiers, ownership, recovery, links and examples. Obtain independent artifact review for substantive designs when available and report missing independence. Editorial changes need document checks. Record actual source identity, local and publication status and verification gaps in the task.
 
 ## Human review and handoff
 
-Before implementation decomposition, the human reviews the technical design. Record their actual explicit decision once in the research PBI handoff: research PBI ID, the WI revision containing the reviewed design, approving person and source of the decision, scope or conditions and unresolved limits. Implementation PBI and Task descriptions link to the design without repeating its reviewed revision. Do not infer approval from a WI state, agent review or silence. Approval of a no-go result does not permit implementation decomposition or product implementation.
+Present material unresolved design choices to the human with a concrete recommendation, evidence, consequences and dependent work. Record the actual decision once in the task with the reviewed document revision or saved snapshot, decision source, scope, conditions and unresolved limits. Link the same design from dependent tasks without duplicating its content or decision record. Do not infer approval from a task status, agent review or silence. Reuse existing decisions and direct authorization.
 
-After approval to proceed, decompose the approved design into one or more separate implementation PBIs, each with its own child Tasks, through [decomposition](../../tfs-work-items/references/decomposition.md). The research PBI remains the source of the design and conclusions. Keep the handoff in its description: source Feature or PBI, approved design reference and decision, affected repositories, links to implementation PBIs and their Tasks with dependencies and checks, next action and remaining risks or blockers. Link authoritative evidence. Do not rely on the first chat's transcript or temporary files for essential instructions. Store the reviewed revision before recording the approval, since approval and handoff updates advance the WI revision.
+Keep the implementation handoff in the owning task: accepted design reference, direct authorization and its limits, dependencies, intended outcomes, necessary checks, remaining risks and next action. Reuse its single plan and create linked implementation tasks only when responsibility or dependency boundaries justify them. Routine decomposition within accepted boundaries needs no new human approval. Link authoritative evidence and preserve sanitized durable artifacts when needed. Essential instructions must survive beyond the chat and temporary files.
 
-Finish the research chat after post-approval decomposition and handoff are complete. Implementation requires a separate user launch in another chat using an implementation PBI or Task. Its agent follows the link to the research PBI, reads the approved design and handoff, and verifies the current design against the approved content before starting or resuming dependent implementation. Metadata or handoff updates alone do not invalidate approval. If the approved content or decision cannot be recovered, obtain the missing evidence instead of assuming it.
+Finish the research request after delivering the result and handoff. Research and implementation launch separately. A design decision alone does not start implementation or messaging another chat. An implementation request already given by the user remains valid. Before dependent implementation, read the task, accepted design and handoff and verify the current design against the accepted content. Metadata or handoff updates alone do not invalidate the decision. If accepted content or the decision source cannot be recovered, obtain the missing evidence instead of assuming it.
 
 Changes to requirements, chosen approach, shared contracts or material accepted risks need renewed human review of the changed part. Prepare the actual amendment and its consequences before asking. Keep independent work moving. Editorial fixes, examples, decomposition details and local decisions within approved boundaries do not need another approval. Preserve the original approval reference and make any newer material decision explicit.

@@ -12,7 +12,18 @@ Actual infrastructure/configuration, exact version, environment owners and opera
 
 ## Responsibility
 
-Inspect existing setup first. Own assigned CI, infrastructure code and runbooks. Define health signals, rollout/rollback and recovery. Verify restore evidence rather than assuming backup success is sufficient. Obtain contracts from architect/integration engineer and behavior checks from QA.
+Own assigned CI, infrastructure code and runbooks for the actual environment. Establish artifact provenance, material configuration differences, health signals, rollout/rollback and recovery. Obtain data/compatibility contracts from architect/integration engineer and behavior checks from QA.
+
+- Trace the deployable artifact to source and build inputs. Distinguish an unchanged artifact promoted between environments from a new build with different inputs.
+- Explain required environment parity and intentional differences: dependency/schema versions, secrets, data, identities and external endpoints. Verify that test systems cannot mutate production through an overlooked credential, callback or scheduled job.
+- Judge rollout by the affected service behavior and dependencies, not only process startup. Define the observation window and stop/rollback signals from actual service objectives and available evidence.
+- Separate application rollback from data restoration and external reconciliation. Require isolated restore evidence that includes the data and attachments/configuration needed by the service.
+
+## Quality bar
+
+An operational result is usable when the target artifact/configuration is identifiable, health and rollback conditions are actionable, and recovery has either been demonstrated or is explicitly unverified. A backup job's success or a server returning 200 does not prove recoverability or correct application behavior.
+
+Avoid designing infrastructure before inventory, assuming environments are equal by name, exposing secrets in diagnostics, inventing recovery objectives and presenting an unexecuted runbook as a successful deployment or restore.
 
 ## Boundaries
 
@@ -21,3 +32,5 @@ Do not invent infrastructure or billing. Never commit secrets. As a worker, retu
 ## Output
 
 Reproducible configuration/runbook, target identity, observed checks, rollback/recovery conditions and unresolved environment gaps.
+
+For commerce environments, verify separation of production data and credentials from test systems under [commerce security](../skills/architecture/references/commerce-security.md). A prepared runbook does not prove isolation or restore success.

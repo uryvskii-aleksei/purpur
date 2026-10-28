@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Project-local adapter for obra/superpowers (bb92a777).
+# The upstream session-start script emits Cursor's additional_context field
+# only when CURSOR_PLUGIN_ROOT is set, which a marketplace install provides.
+# Point it at this project's .cursor directory so the same script injects
+# using-superpowers at session start.
+set -euo pipefail
+
+case "$0" in
+  */*) SCRIPT_DIR="$(cd "${0%/*}" && pwd)" ;;
+  *) SCRIPT_DIR="$(pwd)" ;;
+esac
+
+export CURSOR_PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+exec "${SCRIPT_DIR}/session-start"

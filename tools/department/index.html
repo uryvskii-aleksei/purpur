@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Пурпур · Задачи отдела</title>
+  <link rel="stylesheet" href="/board.css">
+  <script src="/board.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#board">К задачам</a>
+  <header><a class="brand" href="/">·ПУРПУР· <span>ВИРТУАЛЬНЫЙ ИТ-ОТДЕЛ</span></a><span class="local">Локальная доска · только чтение</span></header>
+  <main>
+    <div class="heading"><div><p class="eyebrow">РАБОТА НАД САЙТОМ</p><h1>Задачи, которые видно.</h1><p>Сейчас — удобный выбор и заявка с оплатой через менеджера.<br>Полный интернет-магазин — отдельный следующий этап.</p></div><button id="refresh" type="button">Обновить из файлов ↻</button></div>
+    <p id="message" role="status" aria-live="polite">Читаем записи из репозитория…</p>
+    <div id="summary" class="summary"></div>
+    <details class="team"><summary>Кто за что отвечает <span id="role-count"></span></summary><p>Это роли отдела и сохранённые назначения. Запись роли не запускает сотрудника. «В работе» означает назначенный незавершённый этап. «На просмотре» — результат уже подготовлен, проверка или решение ещё ожидаются.</p><div id="roles" class="roles"></div></details>
+    <form id="filters" class="filters" role="search">
+      <label class="search">Найти задачу<input id="search" type="search" placeholder="Название, ID или текст задачи"></label>
+      <label>Этап<select id="phase"><option value="current">Сейчас · оплата через менеджера</option><option value="future-store">Будущий интернет-магазин</option><option value="all">Все этапы</option></select></label>
+      <label>Ответственный<select id="owner"><option value="all">Все роли</option></select></label>
+      <label>Приоритет<select id="priority"><option value="all">Все</option><option>P0</option><option>P1</option><option>P2</option></select></label>
+    </form>
+    <p id="result-count" class="muted" aria-live="polite"></p>
+    <div id="board" class="board" aria-label="Задачи по статусам"></div>
+    <p class="footnote">Источник — tasks/&lt;id&gt;/README.md в этой рабочей копии Git. Доска перечитывает файлы при открытии и по кнопке. Это не подтверждение публикации на GitHub и не наблюдение за фоновыми процессами.</p>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><span id="detail-id" class="muted"></span><button id="close" type="button" aria-label="Закрыть задачу">Закрыть ×</button></div><h2 id="detail-title"></h2><p id="detail-meta" class="muted"></p><p id="detail-assignment" class="assignment"></p><div id="detail-deps" class="dependencies"></div><div id="detail-body"></div><a id="source" target="_blank" rel="noopener">Открыть исходную запись ↗</a></dialog>
+</body>
+</html>

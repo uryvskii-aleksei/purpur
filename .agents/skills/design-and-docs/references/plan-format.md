@@ -1,27 +1,29 @@
-# Task plan in the PR
+# Task plan
 
-Implementation with a PR keeps one plan in its `## План` description section. Local tasks without a PR keep their plan in chat. Research records evidence, design, decomposition and continuation state in its [research record](research.md). Do not add repository plan files or empty PRs solely for bookkeeping.
+Department work keeps one canonical execution plan in `tasks/<id>/README.md` through [repository-tasks](../../repository-tasks/SKILL.md). The task also owns authorization, status, dependencies, acceptance, decisions, verification and the next step. Its PR links to that plan instead of copying it. A PR without a separate department task may keep its checklist in `## План`. Small local work without a department task or PR may keep its plan in chat.
 
 ## Start
 
-Select the owned [workspace](../../dev-cycle/references/task-worktree.md). For authorized PR delivery, make a real scoped [commit](../../tfs-pull-requests/references/commit.md), push and create a draft PR with `## Цель` and `## План`. A planning-only request does not authorize commit or publication. A direct request to upload sources to an empty repository may bootstrap its `main` without a PR.
+Select the owned [workspace](../../dev-cycle/references/task-worktree.md). Read and preserve the task's direct authorization and settled decisions before planning. Research records findings in the task and lasting design in the linked [technical design](technical-design.md). Research and implementation launch separately. Design approval alone does not start implementation. An existing implementation request needs no repeated confirmation.
 
-[Human design approval](technical-design.md#human-review-and-handoff) permits decomposition and handoff. Implementation still needs its separate launch.
+For authorized PR delivery, make a real scoped [commit](../../dev-cycle/references/commit.md), push and create a draft PR with `## Цель` and `## План`. Put a link to the canonical task plan in that section when a task exists. A planning-only request does not authorize commit or publication. A direct request to upload sources to an empty repository may bootstrap its `main` without a PR. Do not create empty commits or PRs for bookkeeping.
 
 ## Plan section
 
-Keep numbered checklist items in dependency order, describing concrete changes and necessary verification:
+Keep numbered checklist items in dependency order, describing concrete outcomes and necessary verification:
 
 ```markdown
 - [ ] 1. Конкретное изменение или результат.
 ```
 
-Keep the goal brief. Do not add operational transcripts, checkout state or handoff paragraphs around the checklist. Lasting decisions belong in a technical design, continuation notes in [session handoff](session-handoff.md). Honor the actual host's text limits. For TFS, follow its [text format](../../tfs-pull-requests/references/create.md#text-format) and 4000-character description limit.
+Keep the goal brief and acceptance explicit in the owning task. Lasting technical decisions belong with the design, the actual human decision source and continuation state in the task. Avoid operational transcripts and per-agent activity records. Preserve the host's required PR fields and text limits.
 
 ## Progress
 
-Mark completed items only after their changes are present in the pushed PR state. Batch scoped progress commits sensibly. Keep the checklist aligned with the final implementation rather than appending a transcript. Explanation-only review rounds need no new plan items or commits. The coordinator maintains the external plan, planner returns text only. Re-read before external writes and verify afterward.
+Mark an item complete only when its result exists and applicable checks support it. Identify the verified commit or saved source snapshot and dirty/new scope in the task. Distinguish local completion from publication so a checked item never claims an unperformed push or passed CI.
+
+Keep the single checklist aligned with the final implementation rather than appending history. The coordinator maintains the task. Planner returns proposed text only. Explanation-only review rounds need no new plan items or commits. Re-read before external writes, preserve manual content and verify afterward.
 
 ## Finish
 
-After the final push, close completed items and hand the PR to review when ready. Report checks, CI and remaining work accurately. Preserve the checklist across review rounds. A PR handoff does not authorize merging it or closing a task.
+Record acceptance evidence, failures or skipped checks and the next action in the task. When PR delivery was authorized, link the canonical plan and report its actual commit, publication and CI state. Preserve the plan across review rounds. A completed checklist or PR handoff does not authorize task closure or merge.

@@ -96,8 +96,9 @@ function check() {
         expect(skills.includes(name), `Указатель без канонического навыка: ${name}`);
     }
 
+    // Личные установки навыков Cursor не входят в каноническую обвязку проекта.
     const files = ['AGENTS.md', 'README.md', 'CHANGELOG.md', 'CLAUDE.md'].map((name) => path.join(root, name));
-    for (const directory of ['.agents', '.codex', '.claude', '.cursor', 'docs']) {
+    for (const directory of ['.agents', '.codex', '.claude', '.cursor/agents', 'docs', 'tasks']) {
         files.push(...filesUnder(path.join(root, directory)));
     }
     for (const file of files) {

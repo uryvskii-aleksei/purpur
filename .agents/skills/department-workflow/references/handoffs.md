@@ -1,6 +1,6 @@
 # Cross-role handoffs
 
-A handoff references its owning source and gives the receiver evidence to act. It is not an activity log or another plan.
+Save durable handoffs in the owning task under [repository-tasks](../../repository-tasks/SKILL.md). A handoff references its owning source and gives the receiver evidence to act. It is not an activity log or another plan.
 
 ## Assignment input
 

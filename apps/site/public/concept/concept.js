@@ -11,7 +11,8 @@
   let savedCart = {};
   try { savedCart = JSON.parse(localStorage.getItem(cartKey) || '{}'); } catch { /* Недоступное хранилище не мешает выбору товаров. */ }
   const session = window.PurpurConcept.createSession(products, savedCart);
-  const filters = { category: 'all', query: '', budget: 'all', sort: 'default', visibleCount: 12 };
+  const pageSize = 24;
+  const filters = { category: 'all', query: '', budget: 'all', sort: 'default', visibleCount: pageSize };
   const returnFocus = new WeakMap();
   let toastTimer;
   let businessType = 'store';
@@ -89,15 +90,24 @@
       </article>`).join('');
   }
 
+  function renderCategories() {
+    $('#catalog-intro').textContent = `Товаров в каталоге: ${products.length}. Выберите категорию или найдите сладости по названию, вкусу и составу.`;
+    $('#category-navigation').innerHTML = [...$('#category').options].map(option => `<button type="button" data-category="${esc(option.value)}" aria-pressed="${option.value === filters.category}">${esc(option.textContent)}</button>`).join('');
+  }
+
   function renderProducts(resetPage = true) {
-    if (resetPage) filters.visibleCount = 12;
+    if (resetPage) filters.visibleCount = pageSize;
     for (const key of ['category', 'budget', 'sort']) $(`#${key}`).value = filters[key];
     $('#search').value = filters.query;
     $('#reset-filters').hidden = filters.category === 'all' && !filters.query && filters.budget === 'all' && filters.sort === 'default';
-    const filtered = store.filterProducts(products, filters);
+    const matching = store.filterProducts(products, filters);
+    const filtered = filters.category === 'all' && filters.sort === 'default' && !filters.query
+      ? window.PurpurCatalogView.diverseOrder(matching) : matching;
+    $$('#category-navigation [data-category]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === filters.category)));
     $('#result-count').textContent = `Показано ${Math.min(filters.visibleCount, filtered.length)} из ${filtered.length}`;
     $('#load-more').hidden = filtered.length <= filters.visibleCount;
-    $('#load-more').textContent = `Показать ещё ${Math.min(12, Math.max(0, filtered.length - filters.visibleCount))}`;
+    $('#show-all').hidden = filtered.length <= filters.visibleCount;
+    $('#load-more').textContent = `Показать ещё ${Math.min(pageSize, Math.max(0, filtered.length - filters.visibleCount))}`;
     $('#product-grid').innerHTML = filtered.slice(0, filters.visibleCount).map(product => `
       <article class="product-card"><div class="product-image"><button type="button" data-product="${product.id}" aria-label="Подробнее: ${esc(product.name)}"><img src="${asset(product.image)}" alt="${esc(product.name)}" width="402" height="402" loading="lazy"></button></div><p class="product-category">${esc(product.categoryLabel)}</p><h3 class="product-title"><button type="button" data-product="${product.id}">${esc(product.title || product.name)}</button></h3><p class="product-meta">${product.weight ? esc(product.weight) : 'Вес уточняется'} · ${esc(product.packLabel)}</p><div class="product-bottom"><span class="product-price">${money(product.price)}</span>${addButton(product)}</div></article>`).join('') || '<div class="empty-results"><h3>Такого сочетания пока нет.</h3><p>Попробуйте другой вкус, категорию или бюджет.</p><button type="button" class="btn outline" data-reset>Показать все сладости →</button></div>';
   }
@@ -145,7 +155,7 @@
     const { items, total } = session.summary();
     $('#cart-title').textContent = 'Корзина';
     if (!items.length) {
-      $('#cart-content').innerHTML = '<div class="empty-results"><h3>Здесь будет ваш подарок.</h3><p>Добавьте понравившиеся сладости — и продолжим.</p><button class="btn primary" type="button" data-continue>Выбрать сладости →</button></div>';
+      $('#cart-content').innerHTML = '<div class="empty-results"><h3>Здесь будут ваши сладости.</h3><p>Добавьте понравившиеся сладости — и продолжим.</p><button class="btn primary" type="button" data-continue>Выбрать сладости →</button></div>';
       return;
     }
     $('#cart-content').innerHTML = items.map(product => `<article class="cart-item"><img src="${asset(product.image)}" alt="${esc(product.name)}" width="70" height="80"><div><h3>${esc(product.title || product.name)}</h3><small>${esc(product.weight)} · ${money(product.price)} за упаковку</small><div class="qty"><button type="button" data-quantity="${product.id}" data-delta="-1" aria-label="Уменьшить количество: ${esc(product.title || product.name)}" ${product.quantity === 1 ? 'disabled' : ''}>−</button><span aria-label="Количество">${product.quantity}</span><button type="button" data-quantity="${product.id}" data-delta="1" aria-label="Увеличить количество: ${esc(product.title || product.name)}" ${product.quantity === store.MAX_QUANTITY ? 'disabled' : ''}>+</button></div><button type="button" class="remove-item" data-remove="${product.id}" aria-label="Удалить из корзины: ${esc(product.title || product.name)}">Убрать</button></div><span class="cart-item-price">${money(product.subtotal)}</span></article>`).join('') + `<div class="cart-total"><span>Товары</span><span>${money(total)}</span></div><p class="cart-note">Наличие, стоимость доставки и итоговую сумму подтвердит менеджер. В концепции можно подготовить заявку для самостоятельной передачи фабрике.</p><button type="button" class="btn primary cart-action" data-checkout>Перейти к оформлению <span aria-hidden="true">→</span></button><button type="button" class="back-button" data-continue>← Продолжить выбор</button>`;
@@ -320,16 +330,18 @@
   });
   $('#search').addEventListener('input', event => { filters.query = event.target.value; renderProducts(); });
   for (const key of ['category', 'budget', 'sort']) $(`#${key}`).addEventListener('change', event => { filters[key] = event.target.value; renderProducts(); });
-  $('#load-more').addEventListener('click', () => {
+  function revealProducts(count) {
     const firstNewIndex = filters.visibleCount;
-    filters.visibleCount += 12;
+    filters.visibleCount += count;
     renderProducts(false);
     const firstNewAction = $('#product-grid').children[firstNewIndex]?.querySelector('[data-product]');
     if (firstNewAction) {
       firstNewAction.focus({ preventScroll: true });
       firstNewAction.scrollIntoView({ block: 'nearest', behavior: 'instant' });
     }
-  });
+  }
+  $('#load-more').addEventListener('click', () => revealProducts(pageSize));
+  $('#show-all').addEventListener('click', () => revealProducts(products.length));
   $('#wholesale-form').addEventListener('input', event => {
     if (typeof event.target.setCustomValidity === 'function') event.target.setCustomValidity('');
     readBusinessForm();
@@ -347,8 +359,24 @@
     renderBusinessResult();
     $('#wholesale-result').scrollIntoView({ block: 'nearest', behavior: 'auto' });
   });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) $('#factory-video').pause(); });
+  const background = window.createBackgroundVideo({
+    video: $('#hero-video'), button: $('#hero-video-toggle'),
+    page: document, motion: matchMedia('(prefers-reduced-motion: reduce)'),
+    observe(onVisibility) {
+      const observer = new IntersectionObserver(entries => {
+        onVisibility(entries[0].isIntersecting && entries[0].intersectionRatio >= 0.08);
+      }, {
+        threshold: 0.08,
+        rootMargin: `-${Math.ceil($('.header').getBoundingClientRect().height)}px 0px 0px 0px`,
+      });
+      observer.observe($('#hero-video'));
+      return observer;
+    },
+  });
+  window.addEventListener('pagehide', () => background.suspend());
+  window.addEventListener('pageshow', () => background.resume());
 
+  renderCategories();
   renderGifts();
   renderProducts();
   persistCart();

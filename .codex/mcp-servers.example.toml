@@ -1,0 +1,14 @@
+# Disabled examples only. They are not loaded as personal Codex configuration.
+# Keep actual credentials and enabled per-user configuration outside Git.
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+enabled = false
+
+# Replace the hostname only after the actual Rocket.Chat workspace is known.
+# Check its native MCP version, licensing, role permissions and returned tools.
+# Curated native tools include writes. Do not treat this as a read-only profile.
+[mcp_servers.rocketchat]
+url = "https://workspace.example.invalid/api/v1/mcp"
+enabled = false
+env_http_headers = { "X-User-Id" = "ROCKETCHAT_USER_ID", "X-Auth-Token" = "ROCKETCHAT_AUTH_TOKEN" }

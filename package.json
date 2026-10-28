@@ -3,13 +3,19 @@
   "private": true,
   "version": "0.1.0",
   "description": "Сайт Пурпур и агентская обвязка виртуального ИТ-отдела",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "test": "node --test .agents/hooks/scripts/format-touched.spec.js apps/site/tests/store.test.cjs apps/site/tests/concept.test.cjs",
+    "test": "node --test .agents/hooks/scripts/format-touched.spec.js apps/site/tests/store.test.cjs scripts/check-tasks.test.cjs scripts/serve-department.test.cjs scripts/diagnose-desktop-input.test.cjs apps/site/tests/concept.test.cjs apps/site/tests/background-video.test.cjs apps/site/tests/catalog-view.test.cjs",
     "test:harness": "node --test .agents/hooks/scripts/format-touched.spec.js",
-    "test:site": "node --test apps/site/tests/store.test.cjs apps/site/tests/concept.test.cjs",
-    "check": "npm run check:agents && node --check .agents/hooks/scripts/format-touched.js && node --check scripts/serve-site.cjs && node --check apps/site/public/app.js && node --check apps/site/public/store.js && node --check apps/site/public/products.js && node --check apps/site/public/concept/state.js && node --check apps/site/public/concept/concept.js",
+    "test:site": "node --test apps/site/tests/store.test.cjs apps/site/tests/concept.test.cjs apps/site/tests/background-video.test.cjs apps/site/tests/catalog-view.test.cjs",
+    "check": "npm run check:agents && npm run check:tasks && node --check .agents/hooks/scripts/format-touched.js && node --check scripts/serve-site.cjs && node --check apps/site/public/app.js && node --check apps/site/public/store.js && node --check apps/site/public/products.js && node --check scripts/serve-department.cjs && node --check scripts/diagnose-desktop-input.cjs && node --check tools/department/board.js && node --check apps/site/public/concept/state.js && node --check apps/site/public/concept/concept.js && node --check apps/site/public/concept/background-video.js && node --check apps/site/public/concept/catalog-view.js",
     "check:agents": "node scripts/check-agents.cjs",
-    "dev": "node scripts/serve-site.cjs"
+    "dev": "node scripts/serve-site.cjs",
+    "check:tasks": "node scripts/check-tasks.cjs",
+    "tasks": "node scripts/check-tasks.cjs --list",
+    "department": "node scripts/serve-department.cjs",
+    "diagnose:input": "node scripts/diagnose-desktop-input.cjs"
   }
 }

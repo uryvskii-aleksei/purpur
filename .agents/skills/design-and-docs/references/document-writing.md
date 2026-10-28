@@ -8,4 +8,4 @@ Update the owning source under [documentation boundaries](../../../../AGENTS.md#
 - Keep editable diagrams beside their explanation. Validate syntax and inspect rendering when available.
 - Check the latest file and the resulting diff. Preserve deliberate wording and deletions outside scope.
 
-Detailed contracts go to [technical designs](technical-design.md), task HTML follows [TFS writing](../../tfs-work-items/references/links-and-writing.md), PR Markdown follows [PR text format](../../tfs-pull-requests/references/create.md#text-format).
+Detailed contracts go to [technical designs](technical-design.md). Tasks use repository Markdown under [repository-tasks](../../repository-tasks/SKILL.md). PR descriptions link to the canonical task [plan](plan-format.md) and preserve the configured host's required fields. Keep useful sanitized durable evidence beside its task and raw run artifacts outside tracked sources.
