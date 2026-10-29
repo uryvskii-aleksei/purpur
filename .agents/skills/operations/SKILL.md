@@ -17,6 +17,8 @@ Use the [devops contract](../../roles/devops.md). Read the environment and scope
 
 Prepare only the applicable configuration/runbook and local checks. Coordinator executes authorized environment operations. Record what was actually exercised and what is still a proposed procedure. Keep credentials out of commands/logs that become repository artifacts.
 
+The concept the CTO reviews is the host root `https://cj999935.tw1.ru/`. Local preview is `http://127.0.0.1:4173/concept/`. Styles and scripts on that host are cached for a year, so a visual change stays invisible until the HTML query on each changed file is new and those files are uploaded to the root. Do not store panel, FTP or mailbox passwords in Git. A concept edit the CTO asked to see is not delivered until that root serves it.
+
 Route business impact to PO/CTO, shared boundaries to architect and adapters to integration engineer. Operational readiness, QA, business acceptance and release authorization differ. A general operational task does not authorize billing, public access, destructive cleanup or live restores.
 
 For corporate Figma or Rocket.Chat access, apply [corporate MCP selection](../integration-design/references/corporate-mcp.md). Documented capability is not a verified connection, and curated tool sets can include writes.

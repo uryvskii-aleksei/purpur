@@ -1,0 +1,62 @@
+# Карточки Jira
+
+28.10.2026. Доска SCRUM. Четыре стартовые карточки проекта не входят в этот список.
+
+- [SCRUM-5](https://uryvskiialeksei.atlassian.net/browse/SCRUM-5) `backlog` [analytics-event-integration](../../analytics-event-integration/README.md) События покупки и самообслуживания
+- [SCRUM-6](https://uryvskiialeksei.atlassian.net/browse/SCRUM-6) `review` [brand-video-placement](../../brand-video-placement/README.md) Заметность фильма и первый экран концепции
+- [SCRUM-7](https://uryvskiialeksei.atlassian.net/browse/SCRUM-7) `backlog` [business-entry-scenarios](../../business-entry-scenarios/README.md) Раздельные входы для корпоративных покупателей и магазинов
+- [SCRUM-8](https://uryvskiialeksei.atlassian.net/browse/SCRUM-8) `backlog` [business-inquiry-receipt](../../business-inquiry-receipt/README.md) Достоверный приём обращений для бизнеса
+- [SCRUM-9](https://uryvskiialeksei.atlassian.net/browse/SCRUM-9) `backlog` [buyer-identity-policy](../../buyer-identity-policy/README.md) Идентификация покупателя и момент первой покупки
+- [SCRUM-10](https://uryvskiialeksei.atlassian.net/browse/SCRUM-10) `backlog` [buyer-task-observation](../../buyer-task-observation/README.md) Наблюдение за выбором и заявкой без подсказок
+- [SCRUM-11](https://uryvskiialeksei.atlassian.net/browse/SCRUM-11) `backlog` [catalog-authority-mapping](../../catalog-authority-mapping/README.md) Источники цен, фасовок и наличия
+- [SCRUM-12](https://uryvskiialeksei.atlassian.net/browse/SCRUM-12) `in-progress` [catalog-commercial-readiness](../../catalog-commercial-readiness/README.md) Готовность товарных данных к продаже
+- [SCRUM-13](https://uryvskiialeksei.atlassian.net/browse/SCRUM-13) `backlog` [checkout-independent-verification](../../checkout-independent-verification/README.md) Независимая приёмка полной покупки
+- [SCRUM-14](https://uryvskiialeksei.atlassian.net/browse/SCRUM-14) `review` [commerce-funnel-measures](../../commerce-funnel-measures/README.md) Определения показателей продаж и ручной работы
+- [SCRUM-15](https://uryvskiialeksei.atlassian.net/browse/SCRUM-15) `in-progress` [commerce-interaction-spec](../../commerce-interaction-spec/README.md) Состояния интерфейса полной покупки
+- [SCRUM-16](https://uryvskiialeksei.atlassian.net/browse/SCRUM-16) `in-progress` [commerce-process-ownership](../../commerce-process-ownership/README.md) Процесс покупки, исполнение и исключения
+- [SCRUM-17](https://uryvskiialeksei.atlassian.net/browse/SCRUM-17) `review` [commerce-requirements-baseline](../../commerce-requirements-baseline/README.md) Новая цель самостоятельной покупки
+- [SCRUM-18](https://uryvskiialeksei.atlassian.net/browse/SCRUM-18) `review` [commerce-security-handoffs](../../commerce-security-handoffs/README.md) Процедура безопасности покупки и распределение ролей
+- [SCRUM-19](https://uryvskiialeksei.atlassian.net/browse/SCRUM-19) `ready` [corporate-email-separation](../../corporate-email-separation/README.md) Разделение корпоративной почты для предложений и продаж
+- [SCRUM-20](https://uryvskiialeksei.atlassian.net/browse/SCRUM-20) `backlog` [corporate-figma-workspace](../../corporate-figma-workspace/README.md) Организация корпоративного пространства Figma
+- [SCRUM-21](https://uryvskiialeksei.atlassian.net/browse/SCRUM-21) `backlog` [corporate-messenger-evaluation](../../corporate-messenger-evaluation/README.md) Выбор корпоративного мессенджера
+- [SCRUM-22](https://uryvskiialeksei.atlassian.net/browse/SCRUM-22) `backlog` [corporate-quote-lifecycle](../../corporate-quote-lifecycle/README.md) Предложение, согласование и корпоративный заказ
+- [SCRUM-23](https://uryvskiialeksei.atlassian.net/browse/SCRUM-23) `review` [corporate-sales-plan](../../corporate-sales-plan/README.md) План развития корпоративных продаж через сайт
+- [SCRUM-24](https://uryvskiialeksei.atlassian.net/browse/SCRUM-24) `backlog` [corporate-sales-qualification](../../corporate-sales-qualification/README.md) Квалификация корпоративного запроса
+- [SCRUM-25](https://uryvskiialeksei.atlassian.net/browse/SCRUM-25) `review` [corporate-tools-plan](../../corporate-tools-plan/README.md) Корпоративные почта, мессенджер и Figma
+- [SCRUM-26](https://uryvskiialeksei.atlassian.net/browse/SCRUM-26) `in-progress` [cto-inbox](../../cto-inbox/README.md) Вопросы к CTO
+- [SCRUM-27](https://uryvskiialeksei.atlassian.net/browse/SCRUM-27) `in-progress` [cto-phone-department](../../cto-phone-department/README.md) Управление отделом с телефона
+- [SCRUM-28](https://uryvskiialeksei.atlassian.net/browse/SCRUM-28) `backlog` [customer-data-lifecycle](../../customer-data-lifecycle/README.md) Жизненный цикл и права на данные покупателя
+- [SCRUM-29](https://uryvskiialeksei.atlassian.net/browse/SCRUM-29) `backlog` [customer-mobile-app](../../customer-mobile-app/README.md) Мобильное приложение покупателя
+- [SCRUM-30](https://uryvskiialeksei.atlassian.net/browse/SCRUM-30) `backlog` [customer-order-contract](../../customer-order-contract/README.md) Контракт покупателя, заказа и исполнения
+- [SCRUM-31](https://uryvskiialeksei.atlassian.net/browse/SCRUM-31) `backlog` [customer-profile-persistence](../../customer-profile-persistence/README.md) Сохранённый покупатель после первой покупки
+- [SCRUM-32](https://uryvskiialeksei.atlassian.net/browse/SCRUM-32) `backlog` [customer-self-service](../../customer-self-service/README.md) Самообслуживание покупателя
+- [SCRUM-33](https://uryvskiialeksei.atlassian.net/browse/SCRUM-33) `review` [department-backlog-view](../../department-backlog-view/README.md) Видимая доска задач виртуального отдела
+- [SCRUM-34](https://uryvskiialeksei.atlassian.net/browse/SCRUM-34) `review` [desktop-input-freeze](../../desktop-input-freeze/README.md) Зависание ввода на компьютере во время работы
+- [SCRUM-35](https://uryvskiialeksei.atlassian.net/browse/SCRUM-35) `in-progress` [dev-concept-isolation](../../dev-concept-isolation/README.md) Единственный изолированный стенд Dev или Concept
+- [SCRUM-36](https://uryvskiialeksei.atlassian.net/browse/SCRUM-36) `review` [figma-mcp-selection](../../figma-mcp-selection/README.md) Выбор и проверка Figma MCP
+- [SCRUM-37](https://uryvskiialeksei.atlassian.net/browse/SCRUM-37) `backlog` [guest-online-checkout](../../guest-online-checkout/README.md) Полная покупка гостем на сайте
+- [SCRUM-38](https://uryvskiialeksei.atlassian.net/browse/SCRUM-38) `backlog` [legacy-checkout-draft-loss](../../legacy-checkout-draft-loss/README.md) Потеря ввода в прежней витрине
+- [SCRUM-39](https://uryvskiialeksei.atlassian.net/browse/SCRUM-39) `review` [legacy-project-audit](../../legacy-project-audit/README.md) Проверка остатков предыдущего проекта
+- [SCRUM-40](https://uryvskiialeksei.atlassian.net/browse/SCRUM-40) `backlog` [legacy-quiz-entry](../../legacy-quiz-entry/README.md) Отсутствующая точка запуска подбора в прежней витрине
+- [SCRUM-41](https://uryvskiialeksei.atlassian.net/browse/SCRUM-41) `in-progress` [legacy-source-handoff](../../legacy-source-handoff/README.md) Исходники действующего сайта
+- [SCRUM-42](https://uryvskiialeksei.atlassian.net/browse/SCRUM-42) `in-progress` [live-landscape-inventory](../../live-landscape-inventory/README.md) Инвентаризация действующих систем после доступов
+- [SCRUM-43](https://uryvskiialeksei.atlassian.net/browse/SCRUM-43) `review` [macos-setup](../../macos-setup/README.md) Локальный просмотр и инвентаризация инструментов
+- [SCRUM-44](https://uryvskiialeksei.atlassian.net/browse/SCRUM-44) `review` [mobile-accessibility-check](../../mobile-accessibility-check/README.md) Независимая мобильная и клавиатурная проверка
+- [SCRUM-45](https://uryvskiialeksei.atlassian.net/browse/SCRUM-45) `backlog` [mobile-zoom-accessibility](../../mobile-zoom-accessibility/README.md) Ограничение масштабирования публичной витрины
+- [SCRUM-46](https://uryvskiialeksei.atlassian.net/browse/SCRUM-46) `backlog` [order-recovery-contract](../../order-recovery-contract/README.md) Защита заказа от повторов и потери ответа
+- [SCRUM-47](https://uryvskiialeksei.atlassian.net/browse/SCRUM-47) `backlog` [order-recovery-observability](../../order-recovery-observability/README.md) Наблюдаемость и восстановление покупки
+- [SCRUM-48](https://uryvskiialeksei.atlassian.net/browse/SCRUM-48) `in-progress` [own-channel-priority](../../own-channel-priority/README.md) Свои каналы продаж важнее площадок
+- [SCRUM-49](https://uryvskiialeksei.atlassian.net/browse/SCRUM-49) `in-progress` [payment-fulfilment-rules](../../payment-fulfilment-rules/README.md) Правила оплаты, получения и возврата
+- [SCRUM-50](https://uryvskiialeksei.atlassian.net/browse/SCRUM-50) `backlog` [phone-code-return-login](../../phone-code-return-login/README.md) Повторный вход по коду на телефон
+- [SCRUM-51](https://uryvskiialeksei.atlassian.net/browse/SCRUM-51) `backlog` [repeat-purchase-journey](../../repeat-purchase-journey/README.md) Повторная покупка без лишнего ввода
+- [SCRUM-52](https://uryvskiialeksei.atlassian.net/browse/SCRUM-52) `in-progress` [repository-layout](../../repository-layout/README.md) Раскладка репозитория Пурпура
+- [SCRUM-53](https://uryvskiialeksei.atlassian.net/browse/SCRUM-53) `review` [repository-workflow](../../repository-workflow/README.md) Задачи и артефакты внутри Git
+- [SCRUM-54](https://uryvskiialeksei.atlassian.net/browse/SCRUM-54) `review` [retail-full-assortment](../../retail-full-assortment/README.md) Основной розничный вход во весь ассортимент
+- [SCRUM-55](https://uryvskiialeksei.atlassian.net/browse/SCRUM-55) `in-progress` [retail-order-intake](../../retail-order-intake/README.md) Приём розничного заказа с текущей оплатой через менеджера
+- [SCRUM-56](https://uryvskiialeksei.atlassian.net/browse/SCRUM-56) `backlog` [rocketchat-mcp-pilot](../../rocketchat-mcp-pilot/README.md) Ограниченный пилот Rocket.Chat MCP
+- [SCRUM-57](https://uryvskiialeksei.atlassian.net/browse/SCRUM-57) `review` [role-professional-upgrade](../../role-professional-upgrade/README.md) Профессиональные контракты всех виртуальных ролей
+- [SCRUM-58](https://uryvskiialeksei.atlassian.net/browse/SCRUM-58) `backlog` [sales-case-responsibility](../../sales-case-responsibility/README.md) Ответственность за корпоративные обращения
+- [SCRUM-59](https://uryvskiialeksei.atlassian.net/browse/SCRUM-59) `backlog` [seo-direct-sales](../../seo-direct-sales/README.md) SEO и точки входа в прямую продажу
+- [SCRUM-60](https://uryvskiialeksei.atlassian.net/browse/SCRUM-60) `backlog` [simple-site-cms](../../simple-site-cms/README.md) Простое управление текстами и карточками
+- [SCRUM-61](https://uryvskiialeksei.atlassian.net/browse/SCRUM-61) `review` [site-analysis](../../site-analysis/README.md) Начальный анализ Purpur и стратегия развития
+- [SCRUM-62](https://uryvskiialeksei.atlassian.net/browse/SCRUM-62) `backlog` [website-online-payment](../../website-online-payment/README.md) Оплата покупки на сайте

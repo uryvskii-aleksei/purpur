@@ -5,7 +5,7 @@
   const retailDefaults = { name: '', phone: '', delivery: 'spb', city: '', email: '', date: '', notes: '' };
   const deliveryMethods = ['spb', 'region', 'pickup'];
   const businessDefaults = { name: '', contact: '', company: '', details: '' };
-  const limits = { name: 100, phone: 40, city: 150, email: 150, date: 10, notes: 1500, contact: 150, company: 150, details: 1500 };
+  const limits = { name: 100, phone: 40, city: 240, email: 150, date: 10, notes: 1500, contact: 150, company: 150, details: 1500 };
   const money = value => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
   const clean = value => String(value || '').trim();
   const validPhone = value => /^[+\d\s().-]+$/.test(clean(value)) && /^\d{10,15}$/.test(clean(value).replace(/\D/g, ''));
@@ -58,7 +58,7 @@
         if (!product || product.canOrder === false || !Number.isSafeInteger(quantity) || quantity < 0) return false;
         if (quantity === 0) delete cart[product.id];
         else cart[product.id] = Math.min(quantity, store.MAX_QUANTITY);
-        if (stage === 'prepared') stage = 'cart';
+        if (stage === 'prepared' || stage === 'sent') stage = 'cart';
         return true;
       },
       stage: () => stage,
@@ -68,6 +68,7 @@
         return true;
       },
       backToCart() { stage = 'cart'; },
+      markSent() { stage = 'sent'; },
       retailDraft: () => ({ ...retail }),
       saveRetail(update) {
         retail = updateDraft(retail, update, retailDefaults);
@@ -85,9 +86,6 @@
         const draft = retailPayload();
         const basket = summary();
         const lines = [
-          'Заявка подготовлена. Фабрика её ещё не получила.',
-          'Для передачи заявки самостоятельно отправьте этот текст на info@purpur.spb.ru.',
-          '',
           'Розничная заявка «Пурпур»',
           `Имя: ${draft.name}`,
           `Телефон: ${draft.phone}`,
@@ -100,7 +98,7 @@
         if (draft.notes) lines.push(`Пожелания: ${draft.notes}`);
         lines.push('', 'Состав заявки:');
         basket.items.forEach(item => lines.push(`${item.name} · ${item.weight} · ${item.quantity} шт. × ${money(item.price)} = ${money(item.subtotal)}`));
-        lines.push('', `Итого по каталогу: ${money(basket.total)}.`, 'Оплата картой на сайте, как в действующем магазине. Эта демонстрация платёж не проводит. Наличие и итоговую сумму подтвердит менеджер.');
+        lines.push('', `Итого по каталогу: ${money(basket.total)}.`, 'Оплата на сайте не проводилась. Наличие и итоговую сумму подтвердит менеджер.');
         return lines.join('\n');
       },
       businessDraft(type) { return { ...business[typeKey(type)] }; },
@@ -116,9 +114,6 @@
         const key = typeKey(type);
         const draft = business[key];
         const lines = [
-          'Обращение подготовлено. Фабрика его ещё не получила.',
-          'Для передачи обращения самостоятельно отправьте этот текст на info@purpur.spb.ru.',
-          '',
           key === 'corporate' ? 'Корпоративные подарки «Пурпур»' : 'Поставки в магазин «Пурпур»',
           `Имя: ${clean(draft.name)}`,
           `Контакт: ${clean(draft.contact)}`,

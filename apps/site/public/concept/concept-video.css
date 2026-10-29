@@ -9,48 +9,58 @@
 .video-hero::before,
 .video-hero::after { display: none; }
 .video-hero .hero-copy {
-  max-width: 560px;
-  padding: 32px 36px;
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 20px 12px 24px;
   background: none;
   border: none;
   border-radius: 0;
   box-shadow: none;
 }
-/* Размывается только подложка, текст и кнопки остаются резкими. */
+/* Скруглённая подложка. Край размыт сильнее, чтобы граница не читалась линией. */
 .video-hero .hero-copy::before {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: -110px -150px;
-  background: radial-gradient(ellipse at center, rgba(255,253,251,1) 0%, rgba(255,253,251,.97) 46%, rgba(255,253,251,.62) 68%, rgba(255,253,251,0) 88%);
-  filter: blur(24px);
+  inset: -56px -72px -60px -72px;
+  border-radius: 48px;
+  background: rgba(255,253,251,.97);
+  filter: blur(36px);
+  box-shadow: none;
   pointer-events: none;
 }
 .gift-hero.video-hero h1 {
-  color: var(--purple-deep);
-  font-size: clamp(42px, 4.4vw, 64px);
+  color: #491952;
+  font-size: clamp(36px, 4vw, 56px);
 }
+.gift-hero.video-hero .hero-line { white-space: nowrap; }
 .gift-hero.video-hero h1 em,
-.gift-hero.video-hero .eyebrow { color: var(--purple-deep); }
-.gift-hero.video-hero .hero-description { color: var(--ink); }
+.gift-hero.video-hero .eyebrow { color: #9d169e; }
+.gift-hero.video-hero .hero-description { color: #302335; }
 .gift-hero.video-hero .hero-buttons .primary {
   color: white;
-  background: var(--purple);
-  border-color: var(--purple);
+  background: #9d169e;
+  border-color: transparent;
   box-shadow: none;
 }
 .gift-hero.video-hero .hero-buttons .primary:hover {
-  background: var(--purple-deep);
-  border-color: var(--purple-deep);
+  color: white;
+  background: #7a1280;
+  border-color: transparent;
 }
-.gift-hero.video-hero .hero-buttons .text-link { color: var(--purple); }
+.gift-hero.video-hero .hero-buttons .primary:active {
+  color: white;
+  background: #68106d;
+}
 .hero-video-toggle {
-  color: var(--purple-deep);
+  color: var(--purple);
   background: #fffdfbef;
-  border-color: #76267f66;
+  border-color: #9d169e66;
   backdrop-filter: none;
 }
-.hero-video-toggle:hover { background: #eee3f0; }
+.hero-video-toggle:hover { background: #f8e7f7; }
+.hero-video-toggle:active { background: #f0d4ee; }
 .video-hero a:focus-visible,
 .hero-video-toggle:focus-visible { outline-color: var(--purple); }
 @media (max-width: 980px) {
@@ -70,4 +80,5 @@
   .video-hero .hero-copy::before { display: none; }
   .hero-video-toggle { top: 160px; bottom: auto; right: 20px; }
   .gift-hero.video-hero h1 { font-size: 40px; letter-spacing: -1.3px; }
+  .gift-hero.video-hero .hero-line { font-size: clamp(28px, 8.4vw, 40px); }
 }

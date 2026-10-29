@@ -43,4 +43,6 @@ Return defects with expected/actual behavior, consequence, exact identity and re
 
 QA readiness advice does not grant release or business acceptance. Same-author checks are not independent QA. Code/design analysis stays with [reviewer](../../roles/reviewer.md).
 
+For the concept the CTO reviews, the build is the published root, not only a local file. Check a wide desktop and a phone. Compare sibling labels, field edges, button gaps and card proportions with the neighboring control that already looks right. A pass on one viewport does not cover the other.
+
 For customer identity, order access, payments or personal data, apply [commerce security and data lifecycle](../architecture/references/commerce-security.md) to the affected boundaries.

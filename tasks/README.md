@@ -42,6 +42,7 @@
 | Основной розничный вход во весь ассортимент | [retail-full-assortment](retail-full-assortment/README.md) |
 | Зависание ввода на компьютере во время работы | [desktop-input-freeze](desktop-input-freeze/README.md) |
 | Профессиональные контракты всех виртуальных ролей | [role-professional-upgrade](role-professional-upgrade/README.md) |
+| Вопросы, которые ждут решения CTO | [cto-inbox](cto-inbox/README.md) |
 | Видимая доска задач виртуального отдела | [department-backlog-view](department-backlog-view/README.md) |
 | События покупки и самообслуживания | [analytics-event-integration](analytics-event-integration/README.md) |
 | Заметность фильма и первый экран концепции | [brand-video-placement](brand-video-placement/README.md) |
@@ -88,6 +89,7 @@
 | Ограниченный пилот Rocket.Chat MCP | [rocketchat-mcp-pilot](rocketchat-mcp-pilot/README.md) |
 | Ответственность за корпоративные обращения | [sales-case-responsibility](sales-case-responsibility/README.md) |
 | SEO и точки входа в прямую продажу | [seo-direct-sales](seo-direct-sales/README.md) |
+| Свои каналы продаж важнее площадок | [own-channel-priority](own-channel-priority/README.md) |
 | Начальный анализ Purpur и стратегия развития | [site-analysis](site-analysis/README.md) |
 | Оплата покупки на сайте | [website-online-payment](website-online-payment/README.md) |
 | Раскладка репозитория | [repository-layout](repository-layout/README.md) |

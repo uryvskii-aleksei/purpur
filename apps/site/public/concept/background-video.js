@@ -10,6 +10,7 @@
   let failed = false;
   const shouldPlay = () => visible && pageActive && !page.hidden && allowed && !userPaused && !failed;
   function update() {
+    if (!button) return;
     const playing = !video.paused;
     button.textContent = failed ? 'Видео недоступно' : playing ? 'Ⅱ Пауза видео' : '▶ Включить видео';
     button.setAttribute('aria-label', playing ? 'Приостановить фоновое видео' : 'Воспроизвести фоновое видео без звука');
@@ -27,12 +28,14 @@
       // При запрете автозапуска остаются постер и явная кнопка запуска.
     } finally { pending = false; update(); }
   }
-  button.hidden = false;
-  button.addEventListener('click', () => {
-    userPaused = !video.paused;
-    if (!userPaused) allowed = true;
-    sync();
-  });
+  if (button) {
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      userPaused = !video.paused;
+      if (!userPaused) allowed = true;
+      sync();
+    });
+  }
   video.addEventListener('play', update);
   video.addEventListener('pause', update);
   video.addEventListener('error', () => { failed = true; sync(); });

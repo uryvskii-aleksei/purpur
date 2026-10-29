@@ -68,8 +68,8 @@ test('Prepared requests always derive from current cart and draft and never clai
   assert.doesNotMatch(text, /First buyer/);
   assert.match(text, /3 шт\./);
   assert.match(text, /3\s?630 ₽/);
-  assert.match(text, /Фабрика её ещё не получила/);
-  assert.doesNotMatch(text, /зарегистрирована|оплачена|заказ принят/i);
+  assert.match(text, /Оплата на сайте не проводилась/);
+  assert.doesNotMatch(text, /зарегистрирована|оплачена|заказ принят|получила/i);
   assert.equal(session.summary().count, 3);
 });
 
@@ -95,7 +95,7 @@ test('Store and corporate drafts remain separate and current business content is
   assert.match(session.businessText('store'), /Current store details/);
   assert.doesNotMatch(session.businessText('store'), /Corporate buyer/);
   assert.match(session.businessText('corporate'), /Корпоративные подарки/);
-  assert.match(session.businessText('store'), /Фабрика его ещё не получила/);
+  assert.doesNotMatch(session.businessText('store'), /ещё не получила|отправьте этот текст/);
   assert.ok(validateBusiness({ name: 'Buyer', contact: 'invalid@' }).contact);
   assert.deepEqual(validateBusiness({ name: 'Buyer', contact: '+7 999 000-00-00' }), {});
 });

@@ -27,7 +27,7 @@ Results identify the exact build and the boundary actually exercised. Failed mea
 
 ## Common failure modes
 
-Testing only a successful click path, deriving expected values from the code under test, treating a mock as proof of an integration, transferring evidence between different builds, and declaring downstream checks passed after an earlier failure. Do not relabel the author's tests as independent QA.
+Testing only a successful click path, deriving expected values from the code under test, treating a mock as proof of an integration, transferring evidence between different builds, and declaring downstream checks passed after an earlier failure. Checking only the desktop happy path, or only the local preview, misses a phone layout and a stand the CTO actually opens. Do not relabel the author's tests as independent QA.
 
 ## Boundaries
 
